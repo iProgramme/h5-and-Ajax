@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>0411-03 2D变换</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 1000px;
+            margin:10px auto;
+            color: #fff;
+            position: relative;
+        }
+        .box>div{
+            width: 300px;
+            border: 1px solid #000;
+            transition: all 1s;
+            background-color: #ccc;
+            float: left;
+            margin-right:20px;
+            height:300px;
+        }
+        .box>div:nth-child(2){
+            font-size:30px;
+            text-align: center;
+            line-height:300px;
+            box-shadow: 5px 5px 5px 5px #444;
+            background:linear-gradient(to top,yellow,red); /*背景无法 transform */
+            text-shadow: 2px 2px 2px #000;
+        }
+        .box>div:nth-child(2):hover{
+            /*三个值的顺序不同也会导致不同的结果*/
+            transform:scale(3,1) rotate(320deg)  translate(75px,10%) ;/*scale不会改变布局 */
+            transform-origin:80px 180px
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div></div>
+    <div>文字也会在里面变形</div>
+    <div></div>
+</div>
+</body>
+</html>

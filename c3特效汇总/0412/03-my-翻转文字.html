@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            background-color:deepskyblue;
+        }
+        div{
+            width: 700px;
+            margin:100px auto;
+        }
+
+        span{
+            float: left;
+            width: 100px;
+            height: 100px;
+            font-size: 100px;
+            font-family: "Microsoft Yahei";
+            margin-right: 50px;
+            position: relative;
+        }
+
+        span::before,
+        span::after{
+            content:attr(data-text);  /*css3取自定义属性的值*/
+            position : absolute;
+            left:0px;
+            top:0;
+            color:rgba(0,0,0,0.4);
+            transform:scale(0.95,1);
+            transform-origin: left;/*变换中心*/
+            transition:transform 0.5s; /*过渡*/
+        }
+
+        span::after{
+            color:#fff;
+        }
+
+        div:hover span::after{
+            transform:rotateY(40deg) skew(0deg,5deg) scale(0.95,1);
+        }
+
+        div:hover span::before{
+            transform:skew(0deg,25deg) scale(0.95,1);
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <span data-text="传">传</span>
+        <span data-text="智">智</span>
+        <span data-text="播">播</span>
+        <span data-text="客">客</span>
+    </div>
+</body>
+</html>

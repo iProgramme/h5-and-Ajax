@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>0411-03 3D变换</title>
+    <style>
+        .box {
+            width: 400px;
+            margin: 100px auto;
+            perspective: 300px;
+            backface-visibility: hidden;
+        }
+
+        img {
+            width: 100%;
+            transform-origin: bottom center;
+            transition: all 1s;
+            backface-visibility: hidden;
+        }
+
+        .box:hover img {
+            transform: rotateX(-90deg)
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <img src="../img/6.png" alt="">
+</div>
+</body>
+</html>

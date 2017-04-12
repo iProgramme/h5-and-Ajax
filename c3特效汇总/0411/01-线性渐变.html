@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div{
+            width: 1000px;
+            height: 100px;
+            margin:30px auto;
+            border: 1px solid #000;
+        }
+        /* 语法：
+            linear-gradient(方向，起始颜色，终止颜色);
+            方向：to left   to right  to top   to bottom 　角度　30deg
+            起始颜色
+            终止颜色
+        */
+        div:nth-child(1){
+            background-image: linear-gradient(to right,yellow ,green);
+        }
+
+        div:nth-child(2){
+            background-image: linear-gradient(yellow ,green);
+        }
+
+        div:nth-child(3){
+            width: 200px;
+            height: 200px;
+            background-image: linear-gradient(135deg,yellow,green);
+        }
+
+
+        div:nth-child(4){
+            background-image: linear-gradient(to right,
+                yellow 0% ,
+                red 40% ,
+                green 70% ,
+                blue 100%);
+
+        }
+
+        div:nth-child(5) {
+            background-image: linear-gradient(45deg,
+                yellow 0%,
+                yellow 25%,
+                blue 25%,
+                blue 50%,
+                red 50%,
+                red 75%,
+                green 75%,
+                green 100%
+            );
+        }
+
+        div:nth-child(6){
+            background-image: linear-gradient(135deg,
+                #000 0%,
+                #000 25%,
+                #fff 25%,
+                #fff 50%,
+                #000 50%,
+                #000 75%,
+                #fff 75%,
+                #fff 100%
+            );
+
+            /*background-repeat: no-repeat;*/
+            background-size:100px 100%;
+
+            /*animation: gun 1s infinite linear;*/
+        }
+
+        @keyframes gun {
+            0%{
+            }
+
+            100%{
+                background-position: 100px 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+</html>

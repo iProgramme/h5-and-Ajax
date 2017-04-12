@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>0409-02 过渡</title>
+    <style>
+        body{
+            background-color: #ccc;
+        }
+        .jianbian{
+            width: 200px;
+            height: 200px;
+            margin:100px auto;
+            background: red;
+            /*过渡*/
+            transition: border-radius 1s,background-color 5s;
+            transition:all 2s;
+        }
+        .jianbian:hover{
+            border-radius: 50%;
+            background-color: yellow;
+        }
+        .box{
+            padding:20px;
+            background-color: red;
+            width: 200px;
+            box-sizing: border-box; /*这样也不会让height为0*/
+            height:0;
+        }
+    </style>
+</head>
+<body>
+<div class="jianbian"></div>
+<div class="box"></div>
+<script>
+
+</script>
+</body>
+</html>

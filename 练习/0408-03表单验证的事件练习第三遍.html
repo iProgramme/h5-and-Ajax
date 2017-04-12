@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>0408-03表单验证的事件</title>
+
+</head>
+<body>
+<form action="">
+    填写用户名:
+    <input type="text" name="username" required id="inp">
+    <input type="submit" value="提交表单">
+</form>
+<div id="qq"></div>
+<script>
+    var inp = document.getElementById("inp");
+    var qq = document.getElementById("qq");
+    inp.oninput = function () {
+        qq.innerHTML = this.value
+    }
+    inp.oninvalid = function () {
+        inp.setCustomValidity("好像是输入错误")
+    }
+</script>
+</body>
+</html>

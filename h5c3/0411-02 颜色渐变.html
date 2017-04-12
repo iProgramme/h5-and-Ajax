@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>0411-01 颜色渐变</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 700px;
+            height: 100px;
+            margin:10px auto;
+            border: 1px solid #000;
+            color: #fff;
+            position: relative;
+        }
+        div:first-child{
+            background:linear-gradient(to top,yellow,red)
+        }
+        div:nth-child(2){
+            width: 100px;
+            height: 100px;
+            background:linear-gradient(45deg,yellow,red);
+        }
+        div:nth-child(3){
+            background:linear-gradient(to right,red 0%,yellow 15%,blue 70%,pink 100%)
+        }
+        div:nth-child(4){
+            background-image:linear-gradient(45deg,
+            red 0%,
+            red 25%,
+            yellow 25%,
+            yellow 50%,
+            red 50%,
+            red 75%,
+            yellow 75%);
+            background-size:100px 100px;
+            color:black
+        }
+        .box{
+            height: 200px;
+            width: 200px;
+        }
+
+        div:nth-child(5){
+            background:radial-gradient(at top left,red,yellow,blue);
+        }
+        div:nth-child(6){
+            background:radial-gradient(at 60px 80px,red,yellow,blue);
+        }
+        div:nth-child(7){
+            background-image:radial-gradient(200px 60px at 20px 100px,red,yellow,blue);
+            /*椭圆半径: 200px 60px 圆心位置: 20px 100px*/
+        }
+        div:nth-child(8){
+            background-image:linear-gradient(to right,red 10px,yellow,blue 190px);
+            border-radius: 50%;
+            border: 0px solid #000;
+        }
+        div:nth-child(8):before{
+            background: linear-gradient(to right,red 10px,purple,pink,green,blue 190px) #fff;
+            content: '';
+            position: absolute;
+            height: 100px;
+            width: 200px;
+            border-top-left-radius: 50% 100%;
+            border-top-right-radius: 50% 100%;
+
+        }
+        div:nth-child(8):after{
+            background-color: #fff;
+            content: '';
+            position: absolute;
+            height: 180px;
+            width: 180px;
+            left:10px;
+            top:10px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+<div>to top</div>
+<div> to top right</div>
+<div>百分比</div>
+<div>做个斜线平铺</div>
+<div class="box">圆心在左上角的径向渐变</div>
+<div class="box">改动任意圆心位置的径向渐变</div>
+<div class="box">改动渐变的椭圆半径的径向渐变</div>
+<div class="box"></div>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            background-color: #000;
+            overflow: hidden;
+        }
+        .sun{
+            position: absolute;
+            left:50%;
+            top:50%;
+            transform:translate(-50%,-50%);
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            border-radius: 50%;
+            box-shadow: 0 0 20px 1px red;
+        }
+
+        .earth{
+            position: absolute;
+            left:50%;
+            top:50%;
+            transform:translate(-50%,-50%);
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            border: 1px solid #ccc;
+
+            animation:rot 6s linear infinite;
+        }
+
+        .earth::before{
+            content:"";
+            position: absolute;
+            left:0;
+            top:50%;
+            width: 50px;
+            height: 50px;
+            background-color: deepskyblue;
+            transform:translate(-50%,-50%);
+            border-radius: 50%;
+        }
+
+        .moon{
+            position: absolute;
+            left:0;
+            top:50%;
+            transform:translate(-50%,-50%);
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            /*border: 1px solid #ccc;*/
+
+            animation:rot 1s linear infinite;
+        }
+
+        .moon::before{
+            content:"";
+            position: absolute;
+            left:0;
+            top:50%;
+            width: 10px;
+            height:10px;
+            background-color: #fff;
+            transform:translate(-50%,-50%);
+            border-radius: 50%;
+        }
+
+        .mars{
+            position: absolute;
+            left:50%;
+            top:50%;
+            transform:translate(-50%,-50%);
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            border: 1px solid #ccc;
+
+            animation:rot 5s linear infinite;
+        }
+
+        .mars::before{
+            content:"";
+            position: absolute;
+            left:0;
+            top:50%;
+            width: 30px;
+            height: 30px;
+            background-color: gold;
+            transform:translate(-50%,-50%);
+            border-radius: 50%;
+        }
+
+        .venus{
+            position: absolute;
+            left:50%;
+            top:50%;
+            transform:translate(-50%,-50%);
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            border: 1px dashed #ccc;
+
+            animation:rot 7s linear infinite;
+        }
+
+        .venus::before{
+            content:"";
+            position: absolute;
+            left:0;
+            top:50%;
+            width: 60px;
+            height: 60px;
+            background-color: #daa520;
+            transform:translate(-50%,-50%);
+            border-radius: 50%;
+        }
+
+        /*定义动画*/
+        @keyframes rot {
+            0%{
+                transform:translate(-50%,-50%) rotate(0deg);
+            }
+
+            100%{
+                transform:translate(-50%,-50%) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!--太阳-->
+    <div class="sun"></div>
+    <!--地球-->
+    <div class="earth">
+        <!--月球-->
+        <div class="moon"></div>
+    </div>
+    <!-- 火星-->
+    <div class="mars"></div>
+    <!-- 金星-->
+    <div class="venus"></div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>0411-05 旋转变色</title>
+    <style>
+        .box {
+            height: 500px;
+            width: 500px;
+            border: 1px solid #000;
+            margin: 0 auto
+        }
+
+        .box div[class^=box] {
+            width: 0;
+            background: linear-gradient(to right, #fff, red);
+            background-origin: border-box;
+            width: 2px;
+            height:100px;
+            transform:rotate(45deg);
+            transform-origin:bottom center;
+            position: absolute;
+            top: 0;
+            border-radius:1px 7px 0 0
+        }
+    </style>
+</head>
+<body>
+<div class="box" id="box">
+</div>
+</body>
+</html>
+<script>
+    var arr = [];
+    var box = document.getElementById("box")
+    for (var i = 0; i < 360; i++) {
+        var div = document.createElement("div");
+        div.className = "box" + i;
+        div.style.transform = "rotate(" + i + "deg)";
+        div.style.background = "linear-gradient(to right, rgba("+ Math.floor(255 - 255*i/360)+","+Math.floor(255*i/360)+","+Math.floor(255*i/360)+",1), rgba("+  Math.ceil(255*i/360)+","+Math.ceil(255*i/360)+","+Math.ceil(255*i/360)+",1)";
+        box.appendChild(div);
+    }
+</script>

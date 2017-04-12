@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 882px;
+            height: 86px;
+            border: 1px solid #000;
+            margin:100px auto;
+            overflow: hidden;
+        }
+        ul{
+            list-style: none;
+            width: 2000px;
+            /*transform:translateX(-10px);*/
+
+            animation: move 6s linear infinite;
+        }
+
+        li{
+            float: left;
+        }
+
+        img{
+            display: block;
+        }
+
+        @keyframes move {
+            0%{
+                transform:translateX(0);
+            }
+
+            100%{
+                transform:translateX(-882px);
+            }
+        }
+        /*
+            动画的播放状态 ：
+            animation-play-state: running 播放  paused 暂停
+        */
+        .box:hover  ul{
+            animation-play-state:paused;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <ul>
+        <li><img src="images/1.jpg" alt=""/></li>
+        <li><img src="images/2.jpg" alt=""/></li>
+        <li><img src="images/3.jpg" alt=""/></li>
+        <li><img src="images/4.jpg" alt=""/></li>
+        <li><img src="images/5.jpg" alt=""/></li>
+        <li><img src="images/6.jpg" alt=""/></li>
+        <li><img src="images/7.jpg" alt=""/></li>
+        <!--  无缝滚动-->
+        <li><img src="images/1.jpg" alt=""/></li>
+        <li><img src="images/2.jpg" alt=""/></li>
+        <li><img src="images/3.jpg" alt=""/></li>
+        <li><img src="images/4.jpg" alt=""/></li>
+        <li><img src="images/5.jpg" alt=""/></li>
+        <li><img src="images/6.jpg" alt=""/></li>
+        <li><img src="images/7.jpg" alt=""/></li>
+    </ul>
+
+</body>
+</html>

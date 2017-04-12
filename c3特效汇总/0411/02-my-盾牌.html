@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            background-color: deepskyblue;
+        }
+        .box{
+            width: 440px;
+            height: 491px;
+            margin:100px auto;
+        }
+
+        /*
+            打乱图片的位置
+        */
+        img{
+            transition:all 1s;
+        }
+        img:nth-child(1){
+            transform:translate(-300px,100px) rotate(78deg);
+        }
+
+        img:nth-child(2){
+            transform:translate(200px,-100px) rotate(278deg);
+        }
+
+        img:nth-child(3){
+            transform:translate(200px,200px) rotate(123deg);
+        }
+
+        img:nth-child(4){
+            transform:translate(100px,-200px) rotate(121deg);
+        }
+
+        /*复位*/
+        .box:hover img{
+            transform:translate(0,0) rotate(0deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="images/shield_1_01.png" alt="">
+        <img src="images/shield_1_02.png" alt="">
+        <img src="images/shield_1_03.png" alt="">
+        <img src="images/shield_1_04.png" alt="">
+        <img src="images/shield_1_05.png" alt="">
+        <img src="images/shield_1_06.png" alt="">
+        <img src="images/shield_1_07.png" alt="">
+        <img src="images/shield_1_08.png" alt="">
+        <img src="images/shield_1_09.png" alt="">
+    </div>
+</body>
+</html>

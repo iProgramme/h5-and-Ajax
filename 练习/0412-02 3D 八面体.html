@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>0412-02 3D 八面体</title>
+    <style>
+        .box{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            /*background-color: red;*/
+            /*border: 1px solid #000;*/
+            margin:100px auto;
+            transform:rotateX(2deg) rotateY(0deg);
+            transform-style:preserve-3d;
+            animation:gun 10s infinite linear;
+        }
+        @keyframes gun {
+            0%{
+                transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+
+            }
+            100%{
+                transform: rotateX(360deg) rotateY(0deg) rotateZ(360deg);
+            }
+        }
+        .box div{
+            position: absolute;
+            width:0;
+            top:0;
+            left:0;
+            border-width: 100px;
+            border-color:transparent;
+            border-style:solid;
+            background:linear-gradient(to right,rgba(255,0,0,.8),rgba(255,255,0,.7));
+            text-align: center;
+            font-size:100px;
+            color:blue;
+            box-sizing: border-box;
+        }
+        div[class^=box1]{
+            border-bottom-color:rgba(255,255,0,.8);
+            border-bottom-width: 200px;
+            transform-origin:bottom center
+        }
+        div[class^=box2]{
+            border-top-color:rgba(0,0,0,.8);
+            border-top-width: 200px;
+            transform-origin:top center
+        }
+        .box .box11{
+            transform: translateZ(100px) rotateX(30deg);
+            border-bottom-color: rgba(0,0,0,.8);
+        }
+        .box .box12{
+            transform: translateZ(-100px) rotateX(-30deg);
+            border-bottom-color: rgba(255,0,0,.8);
+        }
+        .box .box13{
+            transform: translateX(-100px) rotateY(-90deg) rotateX(30deg);
+            border-bottom-color: rgba(0,0,255,.8);
+        }
+        .box .box14{
+            transform: translateX(100px) rotateY(90deg) rotateX(30deg);
+        }
+
+        /*下面四个*/
+        .box .box21{
+            transform:translateY(300px) translateZ(100px) rotateX(-30deg);
+            border-top-color: rgba(255,0,0,.8);
+        }
+        .box .box22{
+            transform:translateY(300px) translateZ(-100px) rotateX(30deg);
+            border-top-color: rgba(0,0,255,.8);
+        }
+        .box .box23{
+            transform:translateY(300px) translateX(-100px) rotateY(-90deg) rotateX(-30deg);
+            border-top-color: rgba(255,255,0,.8);
+        }
+        .box .box24{
+            transform:translateY(300px) translateX(100px) rotateY(90deg) rotateX(-30deg);
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="box11">
+        <!--前上-->
+    </div>
+    <div class="box12">
+        <!--后上-->
+    </div>
+    <div class="box13">
+        <!--左上-->
+    </div>
+    <div class="box14">
+        <!--右上-->
+    </div>
+    <div class="box21">
+        <!--前下-->
+    </div>
+    <div class="box22">
+        <!--后下-->
+    </div>
+    <div class="box23">
+        <!--左下-->
+    </div>
+    <div class="box24">
+        <!--右下-->
+    </div>
+</div>
+
+</body>
+</html>

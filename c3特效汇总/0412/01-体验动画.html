@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .box{
+            width: 150px;
+            height: 150px;
+            background-color: red;
+
+            /*调用动画
+                animation:动画名称 单次动画执行的时间 执行次数  是否反向；
+            */
+            animation:move 1s infinite alternate;
+        }
+
+        /*
+
+            jquery:animate
+            css3:animation
+             css3中动画的使用  和js中函数比较类似
+             js函数  先定义   在调用
+             function say(){ alert('hh');
+
+             say();
+
+             css3中的动画 先定义 在调用
+
+             定义动画：
+
+             @key-frames 动画名称 {
+                from{ 动画的起始状态}
+
+                to{ 动画的结束状态}
+
+             }
+
+
+
+        */
+        /*动画定义完成*/
+        @keyframes move {
+            from{
+                transform:translate(0,0);
+            }
+
+            to{
+                transform:translate(500px,0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

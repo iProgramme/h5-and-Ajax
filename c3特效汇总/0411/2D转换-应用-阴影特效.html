@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>drop-shadows</title>    
+    <style>
+		body {
+			padding: 20px 0 0;
+			font: 14px/1.5 Arial, sans-serif;
+			text-align: center;
+			color: #333;
+			background: #ccc;
+		}
+
+		.drop-shadow {
+			position: relative;
+			width: 45%;    
+			padding: 14px; 
+			margin: 28px auto 70px; 
+			background: #fff;
+			box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3),
+						0 0 40px rgba(0, 0, 0, 0.1) inset;
+		}
+
+		.drop-shadow:before,
+		.drop-shadow:after {
+			content: "";
+			position: absolute; 
+			z-index: -2;
+			bottom: 15px;
+			left: 10px;
+			width: 50%;
+			height: 20%;
+		}
+
+		.drop-shadow:after {                 
+			right: 10px; 
+			left: auto;
+		}
+
+		.round {
+			border-radius: 4px;
+		}
+
+		.round:before,
+		.round:after { 
+			max-width: 300px;
+			box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+			transform: rotate(-3deg);
+		}
+
+		.round:after {
+			transform: rotate(3deg);
+		}
+
+		.curls {
+			border: 1px solid #efefef;   
+			border-radius: 0 0 120px 120px / 0 0 6px 6px;
+		}
+
+		.curls:before,
+		.curls:after { 
+			bottom: 12px;
+			max-width: 200px;
+			height: 55%;
+			box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+			transform: skew(-8deg) rotate(-4deg);
+		} 
+
+		.curls:after {
+			transform: skew(8deg) rotate(4deg);
+		}
+
+		.perspective:before {
+			left: 28px;
+			bottom: 8px;
+			max-width: 200px;
+			height: 35%;
+			box-shadow: -60px 5px 8px rgba(0, 0, 0, 0.4);
+			transform: skew(50deg);
+		}
+
+		.perspective:after {
+			display: none;
+		}
+
+		.raised:before {
+			width: auto;
+			right: 10px;
+			left: 10px;
+			bottom: 0;
+			box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
+		}
+        
+        
+    </style>
+</head>
+<body>
+
+    <div class="drop-shadow round">
+        <h1>CSS drop-shadows without images</h1>
+        <p>No extra markup, fluid, all modern browsers</p>
+    </div>
+    
+    <div class="drop-shadow curls">
+        <h1>Some curls</h1>
+        <p>No extra markup, all modern browsers</p>
+    </div>
+    
+    <div class="drop-shadow perspective">
+        <h1>Some perspective</h1>
+        <p>No extra markup, all modern browsers</p>
+    </div>
+    
+    <div class="drop-shadow raised">
+        <h1>Raised box</h1>
+        <p>No extra markup, all modern browsers</p>
+    </div>
+</body>
+</html>

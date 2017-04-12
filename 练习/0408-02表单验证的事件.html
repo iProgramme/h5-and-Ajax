@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>0408-02表单验证的事件</title>
+
+</head>
+<body>
+<form action="" novalidate>  <!--// novalidate 用于关闭表单的验证功能-->
+    填写用户名:
+    <input type="text" name="username" required id="inp">
+    <input type="submit" value="提交表单">
+</form>
+<div id="qq"></div>
+<script>
+    var qq = document.getElementById("qq")
+    var inp = document.getElementById("inp")
+    inp.oninput = function () {
+        var arr = this.value.split('');  // 将输入的值分科变成单个字符串,存放在数组之中
+        var str = arr.reverse().join('');  // 将其中的值翻转之后放入数组并拼接成字符串
+        qq.innerHTML = str //
+    }
+    inp.oninvalid = function () {   // 注意这个事件是在需要的地方加,而不是在最后的 submit 上面加
+        inp.setCustomValidity("好像是输入错了")
+    }
+</script>
+</body>
+</html>

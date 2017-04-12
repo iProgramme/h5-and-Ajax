@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    .box{
+      width: 150px;
+      height: 150px;
+      background-color: red;
+      margin:100px;
+
+      /*调用动画*/
+      /*animation: move 1s  infinite alternate linear;*/
+      animation:move 1s infinite 3s alternate ease-in forwards ;
+      /*动画名称*/
+      animation-name: move;
+      /*单次动画持续时间*/
+      animation-duration: 2s;
+      /*动画的执行次数 */
+      animation-iteration-count:1 ;/* infinite　无数的　无限循环*/
+      /*动画的方向*/
+      animation-direction: alternate; /* normal 正常的 alternate  反复 来回*/
+      /*动画延迟*/
+      /*animation-delay: 2s;*/
+      /* 指定动画结束后的状态
+        backwards ：动画结束后 盒子回到 动画开始前的状态
+        forwards:动画结束后，盒子保持  动画结束后的状态不变
+      */
+      /*animation-fill-mode: backwards;*/
+      animation-fill-mode: forwards;
+      /* 动画运动曲线： linear 匀速  ease-in-out 先加速后减速  steps(n)
+        让动画分n步完成
+      */
+      animation-timing-function: steps(16);
+    }
+
+
+    /*定义动画*/
+    @keyframes move {
+      0%{
+        transform:translateX(0px) rotate(0deg);
+      }
+
+      100%{
+        transform:translateX(500px) rotate(400deg);
+      }
+    }
+  </style>
+</head>
+<body>
+   <div class="box"></div>
+</body>
+</html>

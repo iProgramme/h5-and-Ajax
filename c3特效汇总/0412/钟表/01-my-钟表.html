@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            background-color: #ccc;
+        }
+        .clock{
+            width: 250px;
+            height: 250px;
+            margin:100px auto;
+            border: 5px solid #000;
+            border-radius: 50%;
+            position: relative;
+            background-color: #fff;
+        }
+        /*居中*/
+        .clock>div{
+            position: absolute;
+            left:50%;
+            top:50%;
+            transform:translate(-50%,-50%);
+        }
+        
+        .line{
+            width: 100%;
+            height: 3px;
+            background-color: #daa520;
+        }
+        .clock>.line1{
+            height: 5px;
+        }
+        .clock>.line2{
+             transform:translate(-50%,-50%) rotate(30deg);
+         }
+
+        .clock>.line3{
+            transform:translate(-50%,-50%) rotate(60deg);
+        }
+
+        .clock>.line4{
+            transform:translate(-50%,-50%) rotate(90deg);
+            height: 5px;
+        }
+
+        .clock>.line5{
+            transform:translate(-50%,-50%) rotate(120deg);
+        }
+
+        .clock>.line6{
+            transform:translate(-50%,-50%) rotate(150deg);
+        }
+
+        .cover{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: #fff;
+        }
+
+        .second{
+            width: 2px;
+            height: 80px;
+            background-color: red;
+            margin-top:-40px;
+            transform-origin: bottom center;
+            animation: rot 60s steps(60) infinite;
+        }
+
+        .minute{
+            width: 4px;
+            height: 60px;
+            background-color: blue;
+            margin-top:-30px;
+            transform-origin: bottom center;
+            animation: rot 3600s steps(60) infinite;
+        }
+
+
+        .hour{
+            width: 6px;
+            height: 40px;
+            background-color: #000;
+            margin-top:-20px;
+            transform-origin: bottom center;
+            animation: rot 43200s steps(60) infinite;
+        }
+
+        .dot{
+            width: 20px;
+            height: 20px;
+            background-color: #daa520;
+            border-radius: 50%;
+        }
+
+        @keyframes rot {
+            0%{
+                transform:translate(-50%,-50%) rotate(0deg);
+            }
+
+            100%{
+                transform:translate(-50%,-50%) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="clock">
+        <!-- 刻度-->
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+        <div class="line line3"></div>
+        <div class="line line4"></div>
+        <div class="line line5"></div>
+        <div class="line line6"></div>
+        <!-- 遮挡快-->
+        <div class="cover"></div>
+        <!-- 时分秒-->
+        <div class="second"></div>
+        <div class="minute"></div>
+        <div class="hour"></div>
+        <!-- 小圆点-->
+        <div class="dot"></div>
+    </div>
+</body>
+</html>

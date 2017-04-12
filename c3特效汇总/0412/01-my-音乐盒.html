@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            background-color: deepskyblue;
+        }
+        .music{
+            width: 300px;
+            height: 300px;
+            margin:50px auto;
+            position: relative;
+        }
+
+        .music::before,
+        .music::after{
+            content:"";
+            position: absolute;
+            left:0;
+            top:0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: url(images/musicb.jpg) no-repeat;
+            border: 1px solid #ccc;
+        }
+
+        .music::after{
+            background: url(images/musict.jpg) no-repeat;
+            transition:transform 1s;
+            transform-origin: bottom;
+        }
+
+        .music:hover::after{
+            transform:rotateX(180deg);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="music"></div>
+</body>
+</html>

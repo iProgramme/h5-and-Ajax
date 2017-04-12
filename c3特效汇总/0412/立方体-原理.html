@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            background-color: #000;
+        }
+        .box{
+            width: 250px;
+            height: 250px;
+            border: 1px dashed yellow;
+            margin:130px auto;
+            position: relative;
+            /*让子盒子保持3d效果*/
+            transform-style:preserve-3d;
+
+            animation: box 1s linear forwards 1s,rot 6s linear 14s;
+        }
+
+        .box div{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left:0;
+            top:0;
+            text-align: center;
+            line-height: 250px;
+            font-size:60px;
+            color:rgba(255,255,255,0.5);
+        }
+
+        .box .left{
+            animation: left 2s linear forwards 2s;
+        }
+
+        .box .right{
+            animation: right 2s linear forwards 4s;
+        }
+
+        .box .forward{
+            animation: forward 1.5s linear forwards 6s;
+        }
+
+        .box .back{
+            animation: back 1.5s linear forwards  7.5s;
+        }
+
+
+        .box .up{
+            animation: up 2s linear forwards 9s ;
+        }
+
+        .box .down{
+            animation: down 2s linear forwards 11s ;
+        }
+
+        @keyframes box {
+            0%{
+            }
+
+            100%{
+                transform:rotateY(-50deg) rotateX(30deg);
+            }
+        }
+
+        @keyframes left {
+            0%{
+                background-color: rgba(0,255,0,0.5);
+            }
+
+            5%{
+                background-color: rgba(0,255,0,0);
+            }
+
+            10%{
+                background-color: rgba(0,255,0,0.5);
+                transform:translateX(0);
+            }
+
+            50%{
+                transform:translateX(-125px);
+            }
+
+            100%{
+                background-color: rgba(0,255,0,0.4);
+                transform:translateX(-125px) rotateY(-90deg);
+            }
+        }
+
+        @keyframes right {
+            0%{
+                background-color: rgba(255,0,0,0.5);
+            }
+
+            5%{
+                background-color: rgba(0,0,255,0);
+            }
+
+            10%{
+                background-color: rgba(255,0,0,0.5);
+                transform:translateX(0);
+            }
+
+            50%{
+                transform:translateX(125px);
+            }
+
+            100%{
+                background-color: rgba(255,0,0,0.3);
+                transform:translateX(125px) rotateY(90deg) ;
+            }
+        }
+
+        @keyframes forward {
+            0%{
+                background-color: rgba(255,255,0,0.5);
+            }
+
+            10%{
+                background-color: rgba(0,0,255,0);
+            }
+
+            20%{
+                background-color: rgba(255,255,0,0.5);
+            }
+
+            100%{
+                background-color: rgba(255,255,0,0.4);
+                transform:translateZ(125px);
+            }
+        }
+
+        @keyframes back {
+            0%{
+                background-color: rgba(0,255,255,0.5);
+            }
+
+            10%{
+                background-color: rgba(0,255,255,0);
+            }
+
+            20%{
+                background-color: rgba(0,255,255,0.5);
+            }
+
+            100%{
+                background-color: rgba(0,255,255,0.5);
+                transform:translateZ(-125px);
+            }
+        }
+
+        @keyframes up {
+            0%{
+                background-color: rgba(0,111,255,0.5);
+            }
+
+            5%{
+                background-color: rgba(0,111,255,0);
+            }
+
+            10%{
+                background-color: rgba(0,111,255,0.5);
+                transform:translateY(0px)
+            }
+
+            50%{
+                transform:translateY(-125px);
+            }
+
+            100%{
+                background-color: rgba(0,111,255,0.4);
+                transform:translateY(-125px) rotateX(90deg);
+            }
+        }
+
+
+        @keyframes down {
+            0%{
+                background-color: rgba(255,111,12,0.5);
+            }
+
+            5%{
+                background-color: rgba(0,111,255,0);
+            }
+
+            10%{
+                background-color: rgba(255,111,12,0.5);
+                transform:translateY(0px)
+            }
+
+            50%{
+                transform:translateY(125px);
+            }
+
+            100%{
+                background-color: rgba(255,111,12,0.4);
+                transform:translateY(125px) rotateX(-90deg);
+            }
+        }
+
+        @keyframes rot {
+            0%{
+                transform:rotateY(-50deg) rotateX(30deg);
+            }
+
+            100%{
+                transform:rotateY(310deg) rotateX(390deg) ;
+            }
+        }
+
+        h2{
+            margin:40px auto;
+            font-size: 50px;
+            font-family: "Microsoft Yahei";
+            font-weight: normal;
+            color:red;
+            text-align: center;
+
+            text-shadow: 0px 0px 10px #ffe843;
+
+            animation:  bigger 2s infinite  alternate;
+        }
+
+        @keyframes bigger {
+            0%{
+
+            }
+
+
+
+            100%{
+                text-shadow: 0px 0px 30px #fdffd1;
+                color:blue;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="up">上</div>
+        <div class="down">下</div>
+        <div class="left">左</div>
+        <div class="right">右</div>
+        <div class="forward">前</div>
+        <div class="back">后</div>
+    </div>
+    <h2>正方体原理</h2>
+</body>
+</html>

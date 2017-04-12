@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>0412-05 试试写个椭圆转圈的太阳系</title>
+    <style>
+        .main{
+            margin:0px auto;
+            width:600px;
+            height: 600px;
+            border-radius:50%;
+            /*background-color: red;*/
+            border: 1px solid #000;
+            position: relative;
+
+        }
+        .main div{
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            border-radius:50%;
+            border: 1px solid #000;
+            left:0;
+            top:0;
+
+        }
+        @keyframes haha {
+            0%{
+                left:0
+            }
+            100%{
+                left:calc(100% - 40px);
+            }
+        }
+        .main div:after{
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-color: red;
+            border-radius:50%;
+            top:50%;
+            transform: translate(0,-50%);
+            animation: haha 1.6s ease-in-out infinite alternate;
+        }
+        .main .box1{transform: rotate(0deg);}
+        .main .box2{transform: rotate(22.5deg);}
+        .main .box3{transform: rotate(45deg);}
+        .main .box4{transform: rotate(67.5deg);}
+        .main .box5{transform: rotate(90deg);}
+        .main .box6{transform: rotate(112.5deg);}
+        .main .box7{transform: rotate(135deg);}
+        .main .box8{transform: rotate(157.5deg);}
+
+        .main .box1:after{animation-delay:0s}
+        .main .box2:after{animation-delay:.2s}
+        .main .box3:after{animation-delay:.4s}
+        .main .box4:after{animation-delay:.6s}
+        .main .box5:after{animation-delay:.8s}
+        .main .box6:after{animation-delay:1s}
+        .main .box7:after{animation-delay:1.2s;}
+        .main .box8:after{animation-delay:1.4s;}
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+    <div class="box6"></div>
+    <div class="box7"></div>
+    <div class="box8"></div>
+</div>
+
+
+</body>
+</html>

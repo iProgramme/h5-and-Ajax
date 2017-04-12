@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    .box{
+      width: 150px;
+      height: 150px;
+      background-color: red;
+      /*调用动画 ：动画名称  单次动画的执行时间*/
+      animation:move 3s infinite  alternate linear ;
+    }
+
+    /*
+      多个过程动画的定义
+
+      @keyframes 动画名称 {
+        0%{
+
+        }
+
+        10%{
+
+        }
+
+        25%{
+
+        }
+
+        60%{
+
+        }
+
+        100%{
+
+        }
+
+      }
+
+    */
+
+
+    @keyframes move {
+      0%{
+        transform:translate(0,0);
+        border-radius: 0;
+        background-color: red;
+      }
+
+      25%{
+        transform:translate(500px,0);
+        border-radius: 0;
+        background-color: green;
+      }
+
+      50%{
+        transform:translate(500px,300px);
+        border-radius: 50%;
+        background-color: blue;
+      }
+
+      75%{
+        transform:translate(100px,300px);
+        border-radius: 0;
+        background-color: #daa520;
+      }
+
+      100%{
+        transform:translate(0px,0px);
+      }
+
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>

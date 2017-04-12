@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>0409-01nth-child()</title>
+    <style>
+        ul{
+            margin:50px auto;
+            width: 600px;
+            list-style: none;
+        }
+        li{
+            width: 60px;
+            height:60px;
+            line-height: 60px;
+            text-align: center;
+            border: 1px solid #000;
+            float: left;
+            margin:-1px 0 0 -1px;
+            box-sizing: border-box;
+        }
+        /*注意 n 是从0 开始的大于0的整数*/
+        li:nth-child(2n+20){
+            background-color: red;
+        }
+        li:nth-child(-n+5){
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+    <li>10</li>
+    <li>11</li>
+    <li>12</li>
+    <li>13</li>
+    <li>14</li>
+    <li>15</li>
+    <li>16</li>
+    <li>17</li>
+    <li>18</li>
+    <li>19</li>
+    <li>20</li>
+    <li>21</li>
+    <li>22</li>
+    <li>23</li>
+    <li>24</li>
+    <li>25</li>
+    <li>26</li>
+    <li>27</li>
+    <li>28</li>
+    <li>29</li>
+    <li>30</li>
+</ul>
+<script>
+
+</script>
+</body>
+</html>

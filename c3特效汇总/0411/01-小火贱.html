@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        html,body{
+            height: 100%;
+            background-color: #daa520;
+            overflow: hidden;
+        }
+
+        img{
+            width: 50px;
+            position: absolute;
+            left:0;
+            bottom:0;
+            transform:translate(0,200px) rotate(45deg);
+            /*transition:transform 1s;/!*过度*!/*/
+
+        }
+        /*
+            transform:一次有多个变换 每个属性之间使用空格即可；
+        */
+        body:hover img{
+            transform:translate(500px,-500px) rotate(45deg);
+            transition:transform 1s;/*过度*/
+
+        }
+    </style>
+</head>
+<body>
+    <img src="images/rocket.png" alt=""/>
+</body>
+</html>

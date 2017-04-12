@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>0411-03 心形</title>
+    <style>
+        .div1,.div2{
+            margin:100px auto;
+            position: relative;
+            width: 400px;
+            height:350px;
+            background-color: #000;
+            transition: all 2s;
+        }
+        .div2{
+            z-index:3;
+            background-color: transparent;
+            /*left:-60px;*/
+            left:0;
+        }
+        .div1:before,.div1:after,.div2:before,.div2:after{
+            left:calc(50% - 135px);
+            content: '';
+            position: absolute;
+            height: 300px;
+            width: 200px;
+            background-color: red;
+            border-radius:100px 100px 0 0;
+            transform:rotate(-45deg)
+        }
+        .div2:before,.div2:after{
+            background-color: yellow;
+        }
+        .div1:after,.div2:after{
+            left:calc(50% - 64px);
+            transform:rotate(45deg);
+            top:0
+        }
+        .div1:hover .div2{
+            transform: rotate(-720deg) scale(.7);
+            top:-10px;
+        }
+        .div1:hover{
+             transform: rotate(360deg) scale(.7);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <div class="div2"></div>
+    </div>
+</body>
+</html>

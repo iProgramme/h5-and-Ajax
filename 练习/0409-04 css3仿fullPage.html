@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>0409-03 全屏切换</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            display: inline-block;
+        }
+
+        body {
+            background-color: #ccc;
+        }
+
+        .items {
+            position: fixed;
+            z-index: 9999;
+            bottom: 30px;
+            text-align: center;
+            left: calc(50% - 350px);
+
+        }
+
+        .item {
+            float: left;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+            border-radius: 50%;
+            background-color: #fff;
+            box-sizing: border-box;
+            background-color: red;
+            border: 1px solid yellow;
+            transition: width 1s;
+            text-align: center;
+        }
+
+        .img {
+            width: 731px;
+            margin:0 auto;
+            position: relative;
+            overflow: hidden;
+            height:800px;
+        }
+
+        img {
+            width: 100%;
+            position: absolute;
+            right:731px;   // 从右边和下面会有问题
+            transition: all 2s;
+
+        }
+        img:target{
+            right:0;
+        }
+    </style>
+</head>
+<body>
+<div class="items">
+    <a class="item" href="#item1">1</a>
+    <a class="item" href="#item2">2</a>
+    <a class="item" href="#item3">3</a>
+    <a class="item" href="#item4">4</a>
+    <a class="item" href="#item5">5</a>
+    <a class="item" href="#item6">6</a>
+    <a class="item" href="#item7">7</a>
+    <a class="item" href="#item8">8</a>
+    <a class="item" href="#item9">9</a>
+    <a class="item" href="#item10">10</a>
+</div>
+<div class="img">
+    <img src="../img/1.png" alt="" id="item1">
+    <img src="../img/2.png" alt="" id="item2">
+    <img src="../img/3.png" alt="" id="item3">
+    <img src="../img/4.png" alt="" id="item4">
+    <img src="../img/5.png" alt="" id="item5">
+    <img src="../img/6.png" alt="" id="item6">
+    <img src="../img/7.png" alt="" id="item7">
+    <img src="../img/8.png" alt="" id="item8">
+    <img src="../img/9.png" alt="" id="item9">
+    <img src="../img/10.png" alt="" id="item10">
+</div>
+</body>
+</html>

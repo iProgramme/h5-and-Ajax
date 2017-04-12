@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            background-color: #daa520;
+        }
+        .money{
+            width: 300px;
+            height: 300px;
+            margin:100px auto;
+            position: relative;
+        }
+        
+        .money::before,
+        .money::after{
+            content:"";
+            position: absolute;
+            left:0;
+            top:0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: red;
+            background:url(images/bg.png) no-repeat;
+
+            transition:transform 1s;
+            /*盒子背面的可见性 ：隐藏*/
+            backface-visibility: hidden;
+        }
+
+        /* 默认before  反面*/
+        .money::before{
+            transform:rotateY(-180deg);
+        }
+        /*默认正面*/
+        .money::after{
+            /*left:310px;*/
+            background-position: right top;
+        }
+
+        /* 鼠标移上的效果*/
+        .money:hover::before{
+            transform:rotateY(0deg);
+        }
+
+        .money:hover::after{
+            transform:rotateY(180deg);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="money"></div>
+</body>
+</html>

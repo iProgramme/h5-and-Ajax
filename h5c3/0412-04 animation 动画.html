@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>0411-04 animation动画</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            animation: gun 4s ease-in-out infinite ;
+            background-color: red;
+        }
+        @keyframes gun {
+            0%{
+                transform: translate(0px,0) rotate(360deg) scale(1);
+            }
+            25%{
+                transform: translate(700px,0px) rotate(720deg)  scale(.5);
+                background-color: yellow;
+                border-radius:50%
+            }
+            50%{
+                transform: translate(700px,400px) rotate(960deg)  scale(1.5);
+                background-color: blue;
+                border-radius:0
+            }
+            75%{
+                transform: translate(0px,400px) rotate(1440deg)  scale(.5);
+                background-color: black;
+                border-radius:50%
+            }
+            100%{
+                transform: translate(0px,0px) rotate(1800deg)  scale(1);
+                background-color: red;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+
+</div>
+
+</body>
+</html>

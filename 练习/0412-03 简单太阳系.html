@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>0412-03 简单太阳系</title>
+    <style>
+        body{
+            background: #000;
+        }
+        @keyframes gun {
+            0%{
+                transform:translate(-50%,-50%) rotate(0deg) ;
+            }
+            100%{
+                transform:translate(-50%,-50%) rotate(360deg) ;
+            }
+        }
+        div,div:before{
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            border-radius:50%;
+
+        }
+        .yi{
+            background-color: yellow;
+            width: 70px;
+            height: 70px;
+            animation:gun 4s linear infinite
+        }
+        .er{
+            width: 150px;
+            height: 150px;
+            border: 1px solid #fff;
+            animation:gun 3s linear infinite
+        }
+        .er:before{
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: blue;
+            left:0;
+            top:50%;
+        }
+        .moon{
+            width: 50px;
+            height: 50px;
+            border: 1px solid rgba(255,255,255,.4);
+            left:0;
+            top:50%;
+            position: absolute;
+            animation:gun 6s linear infinite
+
+        }
+        .moon:before{
+            content: '';
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            left:0;
+            top:50%;
+            position: absolute;
+        }
+        .san{
+            width: 300px;
+            height: 300px;
+            border: 1px solid #fff;
+            top:50%;
+            position: absolute;
+            animation:gun 8s linear infinite
+
+        }
+        .san:before{
+            content: '';
+            width: 30px;
+            height: 30px;
+            background-color: red;
+            left:0;
+            top:50%;
+            position: absolute;
+        }
+        .si{
+            width: 500px;
+            height: 500px;
+            border: 1px solid #fff;
+            top:50%;
+            position: absolute;
+            animation:gun 10s linear infinite
+
+        }
+        .si:before{
+            content: '';
+            width: 60px;
+            height: 60px;
+            background-color: purple;
+            left:0;
+            top:50%;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<div class="yi"></div>
+<div class="er">
+    <div class="moon"></div>
+</div>
+<div class="san"></div>
+<div class="si"></div>
+
+</body>
+</html>

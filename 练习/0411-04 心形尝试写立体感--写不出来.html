@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>0411-03 心形--写不出来</title>
+    <style>
+        .div1,.div2{
+            margin:100px auto;
+            position: relative;
+            width: 400px;
+            height:350px;
+            background-color: #fff;
+            transition: all 2s;
+        }
+        .div2{
+            z-index:3;
+            background-color: transparent;
+            /*left:-60px;*/
+            left:0;
+        }
+        .div1:before,.div1:after,.div2:before,.div2:after{
+            left:calc(50% - 135px);
+            content: '';
+            position: absolute;
+            height: 300px;
+            width: 200px;
+            background-color: red;
+            border-radius:100px 100px 0 0;
+            transform:rotate(-45deg)
+        }
+        .div2:before,.div2:after{
+            background-color: red;
+        }
+        .div1:after,.div2:after{
+            left:calc(50% - 64px);
+            transform:rotate(45deg);
+            top:0
+        }
+        span{
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(at 130px 130px,rgba(255,255,255,.6),rgba(255,0,0,1));
+            position: absolute;
+            z-index:3;
+            top:-40px;
+            border-radius:50%
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <div class="div2"><span></span></div>
+    </div>
+</body>
+</html>

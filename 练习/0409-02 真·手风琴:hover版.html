@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>0409-01 真·手风琴:hover版</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #ccc;
+        }
+        .items{
+            margin:100px auto;
+            width: 1200px;
+        }
+        .item{
+            float: left;
+            width: 120px;
+            box-sizing: border-box;
+            background-color: red;
+            border-right: 1px solid yellow;
+            height:400px;
+            transition: width 0.5s
+        }
+
+        .items:hover .item{
+            width: 60px;
+        }
+        .items .item:hover{
+            width:660px;   /*会有bug*/
+        }
+    </style>
+</head>
+<body>
+    <div class="items">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+</body>
+</html>

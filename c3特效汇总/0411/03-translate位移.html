@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    .box{
+      width: 1000px;
+      margin:100px auto;
+    }
+
+    .box>div{
+      width: 300px;
+      height: 150px;
+      border: 1px solid #000;
+      background-color: pink;
+      float: left;
+      margin-right:20px;
+    }
+
+    .box>div:nth-child(2){
+      background-color: red;
+      /*过渡*/
+      transition:all 1s;
+    }
+    /*
+      translate(水平位移，垂直位移)
+      正值 向右向下
+      可以使用百分比，是相对于盒子自身而言
+      如果只有一个值，只会水平移动
+
+       transform:translate(-50%);  让盒子向左移动自身宽度一半 让定位的盒子居中
+    */
+    .box>div:hover:nth-child(2){
+       /*transform:translate(-200px,-100px);*/
+       transform:translate(-50%);
+    }
+  </style>
+</head>
+<body>
+<div class="box">
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+</body>
+</html>

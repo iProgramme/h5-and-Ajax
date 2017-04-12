@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport"
+    <meta charset="UTF-8">
+    <title>0408-03表单事件</title>
+    <!--l:less
+    t:than
+    e:equal
+    g:great-->
+    <!--[if lte ie 8]>
+    <![endif]-->
+</head>
+<body>
+<form>
+    请选择:<input type="text" id="inp">
+    文字个数<input type="tel" required id="tel"><br>
+    <input type="submit" value="提交">
+</form>
+
+
+</body>
+</html>
+<script>
+    var inp = document.getElementById("inp");
+    var tel = document.getElementById("tel");
+//    inp.oninput = function () {
+//        tel.value = this.value.length
+//    }
+    tel.oninvalid = function () {
+        tel.setCustomValidity("我擦")
+    }
+</script>

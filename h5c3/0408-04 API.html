@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport"
+    <meta charset="UTF-8">
+    <title>0408-03表单事件</title>
+    <!--l:less
+    t:than
+    e:equal
+    g:great-->
+    <!--[if lte ie 8]>
+    <![endif]-->
+    <style>
+        div{
+            margin:20px auto;
+            width: 400px;
+            height: 100px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+<div class="box box1" id="box"></div>
+<div class="box box2" id="box"></div>
+<div class="box box3" id="box"></div>
+<div class="box box4" id="box"></div>
+
+</body>
+</html>
+<script>
+    var div = document.querySelector(".box1 ~.box2")
+    var divs = document.querySelectorAll("body .box")
+    console.log(div)
+    console.log(divs)
+
+</script>
