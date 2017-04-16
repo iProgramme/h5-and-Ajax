@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>0415-02 数据存储</title>
+    <style>
+        input{
+            margin: 100px;
+        }
+        .box{
+            border: 1px solid #000;
+            width: 400px;
+            height: 400px;
+            margin:100px;
+            margin-top:-50px;
+        }
+    </style>
+</head>
+<body>
+<input type="file" name="user" id="" multiple>
+<div class="box"></div>
+<script>
+    //    会话存储,关闭该窗口,数据消失
+    var input = document.querySelector('input');
+    var box = document.querySelector('.box');
+    input.onchange = function () {
+        console.log(input.files)
+        var a = input.files[0];
+        var b = input.files[1];
+        var fra = new FileReader(a);
+        var frb = new FileReader(b);
+        fra.readAsText(a);
+        frb.readAsDataURL(b);
+
+        fra.onload = function () {
+            console.log(fra.result)
+        }
+        frb.onload = function () {
+            box.innerHTML = "<img src="+frb.result+">"
+        }
+    }
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

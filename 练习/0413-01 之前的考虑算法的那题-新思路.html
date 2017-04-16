@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>0412-05 试试写个椭圆转圈的太阳系</title>
+    <style>
+        /*新思路用圆转圈的方式来做*/
+        .main{
+            margin:0px auto;
+            width:600px;
+            height: 600px;
+            border-radius:50%;
+            /*background-color: red;*/
+            border: 1px dashed #000;
+            position: relative;
+            animation: haha2 2.5s linear infinite;
+        }
+        .main div{
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius:50%;
+            /*border: 1px solid #000;*/
+            left:0;
+            top:0;
+
+        }
+        @keyframes haha2 {
+            0%{
+                transform: rotate(360deg) ;
+            }
+            100%{
+                transform: rotate(0deg);
+            }
+        }
+        @keyframes haha {
+            0%{
+                transform:translate(0,-50%) rotate(0deg) ;
+            }
+            100%{
+                transform:translate(0,-50%) rotate(360deg);
+            }
+        }
+        .main div:after{
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-color: red;
+            border-radius:50%;
+            top:50%;
+            transform: translate(0,-50%);
+
+        }
+        .main .box1{transform: rotate(0deg);}
+        .main .box2{transform: rotate(45deg);}
+        .main .box3{transform: rotate(90deg);}
+        .main .box4{transform: rotate(135deg);}
+        .main .box5{transform: rotate(180deg);}
+        .main .box6{transform: rotate(225deg);}
+        .main .box7{transform: rotate(270deg);}
+        .main .box8{transform: rotate(315deg);}
+
+        .nei{
+            width: 300px;
+            height: 300px;
+            margin: 0;
+            padding: 0;
+            display: block;
+            animation: haha 1.5s linear infinite;
+            position: relative;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <nav class="nei">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+        <div class="box6"></div>
+        <div class="box7"></div>
+        <div class="box8"></div>
+    </nav>
+</div>
+
+
+</body>
+</html>

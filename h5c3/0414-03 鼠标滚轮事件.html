@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>0414-04 鼠标滚轮事件</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .box {
+            width: 3000px;
+            height: 100%;
+            background: linear-gradient(to right, black, yellow, red, yellow, blue, yellow, black);
+        }
+    </style>
+</head>
+<body>
+<div class="box" id="box"></div>
+<script>
+    var i = 0;
+    var box = document.getElementById("box")
+    window.onmousewheel = function (e) {
+        console.log(e.wheelDelta);
+        e.wheelDelta>0?i--:i++;
+        i = i>0?0:i;
+        i = i<-130?-130:i;
+        box.style.transform = "translate("+20*i+"px)"
+    }
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>0414-02 3D切割轮播图</title>
+    <style>
+        .box1,.box2{
+            width: 400px;
+            height: 400px;
+            border: 1px solid #000;
+        }
+        .box2{
+            position: absolute;
+            left:600px;
+            top:100px;
+        }
+        div[class^=item]{
+            background-color: red;
+            color:#fff;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            line-height:100px;
+            font-size:40px;
+            border-radius:50%;
+            float: left;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+<div class="box1">
+    <div class="item1" draggable="true">1</div>
+    <div class="item2" draggable="true">2</div>
+    <div class="item3" draggable="true">3</div>
+    <div class="item4" draggable="true">4</div>
+    <div class="item5" draggable="true">5</div>
+    <div class="item6" draggable="true">6</div>
+    <div class="item7" draggable="true">7</div>
+    <div class="item8" draggable="true">8</div>
+</div>
+<div class="box2"></div>
+<script>
+    var items = document.querySelectorAll('.box1 div');
+    var box2 = document.querySelector('.box2')
+    var move = null;
+    for (var i = 0; i < items.length; i++) {
+        items[i].ondragstart = function () {
+            move = this
+        }
+    }
+    box2.ondragover = function (e) {
+        e.preventDefault()
+    }
+    box2.ondrop = function () {
+        this.appendChild(move)
+    }
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

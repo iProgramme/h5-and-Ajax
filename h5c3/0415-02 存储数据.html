@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>0415-02 数据存储</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<input type="text" name="uesrname">
+<button>存储</button>
+<button>获取</button>
+<button>删除</button>
+<button>清空</button>
+<script>
+    //    会话存储,关闭该窗口,数据消失
+    var input = document.querySelector('input');
+    var btns = document.querySelectorAll('button');
+    btns[0].onclick = function () {
+        sessionStorage.setItem("name", input.value)
+        sessionStorage.setItem("age", "19")
+        sessionStorage.setItem("sex", "男")
+    }
+    btns[1].onclick = function () {
+        input.value = sessionStorage.getItem("name")
+    }
+    btns[2].onclick = function () {
+        sessionStorage.removeItem("name")
+    }
+    btns[3].onclick = function () {
+        sessionStorage.clear("name")
+    }
+
+    //    方法与 localStorage 一样
+
+    // 判断是否连网(移动端用的比较多)
+    window.ononline = function () {
+        alert('网络已经连接')
+    }
+    window.onoffline = function () {
+        alert('网络已经连接')
+    }
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

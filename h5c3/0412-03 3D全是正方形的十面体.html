@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>0411-04 3D立方体</title>
     <style>
+        body{
+            perspective: 500px;
+        }
         .box {
             width: 200px;
             height: 200px;
@@ -11,23 +14,18 @@
             margin: 100px auto;
             transform-style:preserve-3d;
             position: relative;
-            animation:gun 5s linear infinite;
+            animation:gun 10s linear infinite;
             position: relative;
 
         }
         @keyframes gun {
             0%{
-                transform: rotateY(360deg) rotateZ(0deg) rotateX(0deg);
+                transform: rotateY(0deg) rotateZ(0deg) rotateX(0deg);
                 left:0;
                 top:0
             }
-            50%{
-                transform: rotateY(180deg) rotateZ(180deg) rotateX(180deg);
-                left:300px;
-                top:300px
-            }
             100%{
-                transform: rotateY(0deg) rotateZ(360deg) rotateX(360deg);
+                transform: rotateY(360deg) rotateZ(360deg) rotateX(360deg);
                 left:0px;
                 top:0
             }

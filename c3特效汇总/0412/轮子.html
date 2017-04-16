@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .boxf{
+
+            width: 400px;
+            height: 200px;
+            border-radius: 20px;
+            position: absolute;
+            top: 50px;
+            background-color: red;
+            animation: zou 10s linear infinite ;
+        }
+        @keyframes zou {
+            0%{
+                left: -400px;
+                box-shadow: 0px 0 10px rgba(0,0,0,1)
+            }
+            50%{
+                left: 400px;
+                box-shadow: 20px 0 10px rgba(0,0,0,.6);
+            }
+            80%{
+                left: 600px;
+                box-shadow: 0px 0 10px rgba(0,0,0,1)
+            }
+            100%{
+                left: 1400px;
+                box-shadow: -40px 0 10px rgba(0,0,0,.6)
+            }
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            border-radius: 50%;
+            margin-top: 40px;
+            position: absolute;
+            left: 40px;
+            bottom: -40px;
+            transition: all 2s;
+            animation: zhuan 10s linear infinite;
+        }
+
+        .box1{
+            position: absolute;
+            left: 270px;
+            bottom: -40px;
+            transition: all 2s;
+            animation: zhuan1 10s linear infinite;
+        }
+        @keyframes zhuan1 {
+            0%{
+                left: 270px;
+
+                transform: rotate(0deg);
+            }
+            50%{
+                transform: rotate(720deg)
+            }
+            80%{
+                transform: rotate(900deg)
+            }
+            100%{
+                transform: rotate(2000deg);
+            }
+        }
+        @keyframes zhuan {
+            0%{
+                transform: rotate(0deg);
+            }
+            50%{
+                transform: rotate(720deg)
+            }
+            80%{
+                transform: rotate(900deg)
+            }
+            100%{
+                transform: rotate(2000deg);
+            }
+        }
+        .son1{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: white;
+        }
+        .son{
+            width: 5px;
+            height: 50px;
+            /*background-color: red;*/
+            transform-origin: bottom;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-100%) rotate(0deg);
+        }
+        .son:before{
+            content: '';
+            width: 5px;
+            height: 5px;
+            position: absolute;
+            top: 0px;
+            background-color: white;
+        }
+        .son:after{
+            content: '';
+            width: 5px;
+            height: 5px;
+            position: absolute;
+            bottom: 10px;
+            background-color: black;
+        }
+        .son:nth-child(2){
+            transform:  translate(-50%,-100%)  rotate(45deg);
+        }
+        .son:nth-child(3){
+            transform:  translate(-50%,-100%)  rotate(90deg);
+        }
+        .son:nth-child(4){
+            transform:  translate(-50%,-100%)  rotate(135deg);
+        }
+        .son:nth-child(5){
+            transform:  translate(-50%,-100%)  rotate(180deg);
+        }
+        .son:nth-child(6){
+            transform:  translate(-50%,-100%)  rotate(225deg);
+        }
+        .son:nth-child(7){
+            transform:  translate(-50%,-100%)  rotate(270deg);
+        }
+        .son:nth-child(8){
+            transform:  translate(-50%,-100%)  rotate(-45deg);
+        }
+
+        .window{
+            width: 80%;
+            height: 80px;
+            margin:20px auto;
+        }
+
+        .window span{
+            float: left;
+            height: 100%;
+            width: 23%;
+            background-color: #fff;
+            margin:0 1%;
+            border-radius: 15px;
+            box-shadow: 0 0 10px 0 #666 inset,0 0 10px 0 #666 ;
+            /*background: url(tt.jpg) no-repeat left center;*/
+
+
+        }
+
+
+
+    </style>
+</head>
+<body>
+<div class="boxf">
+    <div class="window">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="box">
+    <div class="son1"></div>
+    <div class="son"></div>
+    <div class="son"></div>
+    <div class="son"></div>
+    <div class="son"></div>
+    <div class="son"></div>
+    <div class="son"></div>
+    <div class="son"></div>
+    <div class="son"></div>
+</div>
+    <div class="box box1">
+        <div class="son1"></div>
+        <div class="son"></div>
+        <div class="son"></div>
+        <div class="son"></div>
+        <div class="son"></div>
+        <div class="son"></div>
+        <div class="son"></div>
+        <div class="son"></div>
+        <div class="son"></div>
+    </div>
+</div>
+</body>
+</html>
