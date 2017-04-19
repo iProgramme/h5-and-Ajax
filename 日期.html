@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>判断时间与日期</title>
+    <style>
+        .main{
+            margin:50px auto;
+            text-align: center;
+            border: 1px solid #000;
+            padding:40px;
+            overflow: hidden;
+        }
+        .main>div{
+            border: 1px solid #000;
+            padding:20px;
+            margin:0 10px 10px 0;
+            float: left;
+            height:100px;
+        }
+        input{
+            height: 40px;
+            width: 200px;
+            border-radius:5px;
+            outline: none;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="box1">
+        <input type="date" name="" class="input1">
+        <p>这是这年<span>几</span>天</p>
+        <p>这是这年<span>几</span>周</p>
+    </div>
+    <div class="box2">
+        <input type="date" name="" class="input2">
+        <p><span>距今已有多少天</span>(只计算今年的某一天到今天)</p>
+    </div>
+    <div class="box3">
+        <input type="date" name="" class="input3">
+        <p><span>距今还剩多少天</span>(只计算今年的某一天到今天)</p>
+    </div>
+</div>
+
+
+<script>
+    var input1 = document.querySelector(".input1");
+    var input2 = document.querySelector(".input2");
+    var input3 = document.querySelector(".input3");
+
+    var ps = document.querySelectorAll('p span');
+    var array = [31,28,31,30,31,30,31,31,30,31,30,31];
+
+    // 得到今天的日期
+    var date = new Date();
+    var year = date.getFullYear()
+    var month = date.getMonth()+1;
+    var day = date.getDate();
+    var str = year+"-"+month+"-"+day;
+    //console.log(str)
+
+
+    // 2017-04-18 是一年中的第几天
+    //判断是否是闰年
+    runnian(200)
+    function runnian(number) {
+        number = parseInt(number) || 0;
+        number % 4 == 0 && number % 100 != 0 || number % 400 == 0 ? array[1]=29: array[1]=28;
+        // console.log(array)
+        console.count("该函数执行的次数")
+    }
+    // 传入 2017-04-18
+    function calc_day(str) {
+        console.time("耗时")
+        var arr = str.split('-');
+        runnian(arr[0]); // 判断是不是闰年
+        var month = parseInt(arr[1]); // 得到这是第几个月
+        var day = parseInt(arr[2]); // 得到这个月的第几天
+        for (var i = 1; i < month; i++) {
+            day+=array[i-1]
+        }
+        console.timeEnd("耗时")
+        return day
+    }
+    // 计算是第多少天
+    input1.onchange = function () {
+        var day = calc_day(this.value);
+        //console.log(day)
+        ps[0].innerHTML = day;
+        ps[1].innerHTML = parseInt((day-1)/7+1);
+//        input2.value = this.value
+    }
+    // 这一天到今天已经有多少天
+    input2.onchange = function () {
+        // console.log(day)
+        ps[2].innerHTML = this.value+"到今天已经有"+(calc_day(str) - calc_day(this.value))+"天";
+    }
+
+    // 距离这一天还剩多少天
+    input3.onchange = function () {
+        ps[3].innerHTML = "距离"+this.value+"还剩"+(calc_day(this.value) - calc_day(str))+"天";
+    }
+
+</script>
+</body>
+</html>
+
+

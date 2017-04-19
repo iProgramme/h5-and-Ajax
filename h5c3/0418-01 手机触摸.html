@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>0418-01 手机触摸事件</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            height: 300px;
+            background-color: #f00;
+        }
+
+        .dib {
+            display: inline-block;
+            background-color: #fff;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="dib">a</div>
+    <div class="dib">a</div>
+    <div class="dib">a</div>
+    <div class="dib">a</div>
+    <div class="dib">a</div>
+    <div class="dib">a</div>
+    <div class="dib">a</div>
+    <div class="dib">a</div>
+    <div class="dib">a</div>
+</div>
+<script>
+    var box = document.querySelector('.box');
+    box.addEventListener("touchstart", function (e) {
+        console.log(e)
+        console.log(e.targetTouches[0].clientX)
+    })
+    //    box.addEventListener("touchmove",function (e) {
+    //        console.log(e.targetTouches[0].clientX)
+    //    })
+    //    box.addEventListener("touchend",function (e) {
+    //        console.log(e.changedTouches[0].clientX)
+    //    })
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>0418-02 一侧宽度固定一侧自适应</title>
+    <style>
+        .box1{
+            width: 200px;
+            height: 300px;
+            float: left;
+            background-color: yellow;
+        }
+        .box2{
+            height:400px;
+            overflow: hidden;
+            background-color: red;
+        }
+        .qq div{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border: 1px solid #000;
+        }
+        .qq{
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+四个方法 <br>
+<h2>第一种:定位,用父级的padding</h2>
+<h2>第二种:固定宽度的浮动,自适应的盒子 overflow:hidden</h2>
+<h2>第三种:calc</h2>
+<h2>第三种:flex</h2>
+<br>
+<br>
+<h4>例1</h4>
+<div class="box1"></div>
+<div class="box2"></div>
+<br>
+<br>
+<h4>例2</h4>
+<div class="qq">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>0419-01 点击添加图片和视频</title>
+    <style>
+        input {
+            margin: 100px;
+        }
+
+        .box {
+            border: 1px solid #000;
+            /*width: 400px;*/
+            /*height: 400px;*/
+            overflow: hidden;
+            margin: 100px;
+            margin-top: -50px;
+        }
+    </style>
+</head>
+<body>
+<input type="file" name="user" id="">
+<div class="box"></div>
+<script>
+    //    会话存储,关闭该窗口,数据消失
+    var input = document.querySelector('input');
+    var box = document.querySelector('.box');
+    input.onchange = function () {
+        var a = input.files[0];
+        var fra = new FileReader(a);
+        console.log(fra)
+        console.log(this.value)
+
+        var dian = this.value.lastIndexOf('.');
+        var str = this.value.substr(dian + 1); // 此时,这个 str 就是得到的后缀名 如 txt html mp4
+//        console.log(str)
+        if (str == 'txt' || str == 'css' || str == 'js' || str == "html") {
+            fra.readAsText(a);
+            fra.onload = function () {
+                box.innerHTML = fra.result
+//            console.log(fra.result)
+            }
+        }
+        if (str == "mp4"||str == 'itcast') {
+            console.log(1)
+
+            fra.readAsDataURL(a);
+            fra.onload = function () {
+                box.innerHTML = "<video src=" + fra.result + " controls></video>"
+            }
+        }
+        if (str == 'gif' || str == "jpg" || str == 'png') {
+            fra.readAsDataURL(a);
+            fra.onload = function () {
+                box.innerHTML = "<img src=" + fra.result + ">"
+            }
+        }
+
+//        fra.onload = function () {
+//            console.log(fra.result)
+//        }
+//        fra.readAsDataURL(a);
+//        fra.onload = function () {
+//            box.innerHTML = "<img src=" + fra.result + ">"
+//        }
+
+
+    }
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

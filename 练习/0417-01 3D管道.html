@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>0417-01 3D管道</title>
+    <style>
+        body{
+            /*width:2000px;*/
+            transition: all 1s;
+            animation: likai1 20s infinite linear alternate;
+            -webkit-perspective: 590px;
+        }
+        @keyframes likai {
+            0%{
+                transform: translateZ(0px);
+            }
+            10%{
+                transform: translateZ(800px);
+            }
+            20%{
+                transform: translateZ(800px) translateX(200px) rotateY(90deg);
+            }
+            30%{
+                transform: translateZ(1100px) translateX(200px) rotateY(90deg);
+            }
+            40%{
+                transform: translateZ(900px)  translateX(200px) translateY(600px) rotateY(90deg)  rotateZ(-90deg) ;
+            }
+            50%{
+                transform: translateZ(400px) translateX(600px) translateY(600px) rotateY(180deg) rotateZ(-90deg);
+            }
+            60%{
+                transform: translateZ(900px) translateX(600px) translateY(600px) rotateY(180deg) rotateZ(-90deg);
+            }
+            70%{
+                transform: translateZ(900px) translateX(600px) translateY(600px) rotateY(180deg) rotateZ(-90deg)
+            }
+        }
+        .box{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            transform: translateZ(-100px);
+            /*background-color: red;*/
+            /*border: 1px solid #000;*/
+            margin:100px auto;
+            transform-style:preserve-3d;
+            animation:likai 25s infinite linear;
+            transform:  translateZ(900px) translateX(600px) translateY(600px) rotateY(180deg) rotateZ(-90deg)
+        }
+        /*保证左右两个div都是三个长度的 width*/
+        .box div{
+            width: 600px;
+            height: 200px;
+            position: absolute;
+            top:0;
+            left:0;
+            background:linear-gradient(to right,rgba(255,0,0,.8),rgba(255,255,0,.7),rgba(255,0,0,.8));
+            text-align: center;
+            line-height:200px;
+            font-size:100px;
+            color:#fff;
+            text-shadow: 0px 0px 5px #000;
+            transform-style:preserve-3d;
+            backface-visibility: ;
+        }
+        /*保证上下两个div都是三个长度的 height*/
+        .box div:nth-child(4n),.box div:nth-child(4n-1){
+            width: 200px;
+            height: 600px;
+        }
+
+        .box1{
+            /*transform: translateZ(100px) ;*/
+        }
+        .box2{
+            transform: translateZ(-300px) rotateY(0deg);
+        }
+        .box3{
+             transform: translateX(-300px) rotateY(90deg);
+         }
+        .box .box4{
+            transform: translateZ(100px) translateX(0px) rotateY(-90deg);
+            width:400px
+        }
+        .box5{
+            transform: translateY(-300px) rotateX(270deg);
+        }
+        .box6{
+            transform: translateY(-100px) rotateX(90deg);
+        }
+        .box .box7{
+            width:800px;
+            transform: translateZ(-300px) translateX(0px)  rotateY(0deg);
+        }
+        .box8{
+            transform: translateZ(-100px) translateX(200px)  rotateY(180deg);
+        }
+        .box9{
+            transform: translateY(-300px) translateZ(-200px) translateX(400px) rotateX(90deg)  rotateZ(90deg);
+        }
+        .box div.box10{
+            height: 400px;
+            transform: translateY(0px) translateZ(-200px) translateX(300px) rotateX(90deg) rotateZ(90deg);
+        }
+        .box div.box11{
+            width:800px;
+            transform: translateY(300px) translateX(100px)  translateZ(-200px) translateX(300px) rotateX(90deg) rotateY(90deg);
+        }
+        .box div.box12{
+            transform: translateY(400px) translateZ(-300px) translateX(400px) rotateX(0deg) rotateZ(90deg);
+        }
+        .box div.box13{
+            height:400px;
+            transform: translateY(200px) translateZ(-100px) translateX(600px) rotateX(0deg) rotateZ(0deg);
+        }
+        .box div.box14{
+            transform: translateY(200px) translateZ(-200px) translateX(500px) rotateY(90deg) rotateZ(0deg);
+        }
+        .box div.box15{
+            width:400px;
+            transform: translateY(600px) translateZ(100px) translateX(400px) rotateY(90deg) rotateZ(0deg);
+        }
+        .box div.box16{
+            transform: translateY(600px) translateZ(200px) translateX(500px) rotateY(90deg) rotateZ(0deg);
+        }
+        .box div.box17{
+            transform: translateY(300px) translateZ(200px) translateX(600px) rotateY(0deg) rotateX(90deg);
+        }
+        .box div.box18{
+            height:800px;
+            transform: translateY(400px) translateZ(100px) translateX(600px) rotateY(0deg) rotateX(90deg);
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <!--<div class="box1"><span>前</span></div>-->
+    <!--<div class="box2"><span>后</span></div>-->
+    <div class="box3"><span>3</span></div>
+    <div class="box4"><span>4</span></div>
+    <div class="box5"><span>5</span></div>
+    <div class="box6"><span>6</span></div>
+    <div class="box7"><span>7</span></div>
+    <div class="box8"><span>82</span></div>
+    <div class="box9"><span>9</span></div>
+    <div class="box10"><span>10</span></div>
+    <div class="box11"><span>11</span></div>
+    <div class="box12"><span>12</span></div>
+    <div class="box13"><span>13</span></div>
+    <div class="box14"><span>14</span></div>
+    <div class="box15"><span>15</span></div>
+    <div class="box16"><span>16</span></div>
+    <div class="box17"><span>17</span></div>
+    <div class="box18"><span>18</span></div>
+</div>
+
+</body>
+</html>

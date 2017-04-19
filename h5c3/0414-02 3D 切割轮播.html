@@ -152,7 +152,7 @@
                     "transition-property":"transform",
                     "transition-duration":"1s"
                 })
-                $("li").on("transitionend",function () {   /*出现问题的原因是on绑定的事件不会覆盖之前绑定的事件*/
+                $("li").eq(4).on("transitionend",function () {   /*出现问题的原因是on绑定的事件不会覆盖之前绑定的事件*/
                     flag = true
                 })
             }
