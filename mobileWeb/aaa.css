@@ -1,0 +1,37 @@
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: #123098;
+}
+.box1 {
+  height: 100px;
+  width: 200px;
+}
+.box2 {
+  background-color: #123098;
+  border: 1px solid #000;
+}
+.box3 {
+  height: 100px;
+  width: 200px;
+  background-color: #123098;
+  border: 1px solid #000;
+  -webkit-background-size: 200px, 40px;
+  -moz-background-size: 200px, 40px;
+  -ms-background-size: 200px, 40px;
+  -o-background-size: 200px, 40px;
+  background-size: 200px, 40px;
+}
+.box4 .box3 {
+  padding: 20px;
+}
+.box4 .box3 a {
+  color: #ccc;
+}
+.box4 .box3 a:hover {
+  text-underline: none;
+}
+.box5 {
+  width: 240px -20%;
+  height: 240px -20%;
+}

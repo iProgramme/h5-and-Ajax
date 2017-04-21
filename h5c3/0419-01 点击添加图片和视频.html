@@ -52,7 +52,9 @@
         if (str == 'gif' || str == "jpg" || str == 'png') {
             fra.readAsDataURL(a);
             fra.onload = function () {
-                box.innerHTML = "<img src=" + fra.result + ">"
+                box.innerHTML = "<img src=" + fra.result + "><br>"+fra.result;
+//                console.log(fra.result)
+
             }
         }
 

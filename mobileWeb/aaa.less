@@ -1,0 +1,49 @@
+// 变量
+@color:#123098;
+.box{
+  width: 100px;
+  height: 100px;
+  background-color: @color;
+}
+.box1{
+  height: 100px;
+  width: 200px;
+}
+.box2{
+  background-color: @color;
+  border: 1px solid #000;
+}
+//拿到.box1 和 .box2 的属性
+.box3{
+  .box1;
+  .box2;
+  .bgz(200px,40px)
+}
+// 函数
+//表示宽和高
+.bgz(@w,@h){
+  -webkit-background-size: @w,@h;
+  -moz-background-size: @w,@h;
+  -ms-background-size: @w,@h;
+  -o-background-size: @w,@h;
+  background-size: @w,@h;
+}
+// 嵌套
+.box4{
+  .box3{
+    padding:20px;
+    a{
+      color:#ccc;
+      &:hover{  // hover 事件
+        text-underline: none;
+      }
+    }
+  }
+}
+
+//计算
+.box5{
+  width: 200+40px -20%;
+  height: 200px+40px -20%;
+}
+

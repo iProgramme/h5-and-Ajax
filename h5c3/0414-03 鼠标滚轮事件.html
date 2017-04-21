@@ -20,15 +20,20 @@
 </head>
 <body>
 <div class="box" id="box"></div>
+<script src="../js/jquery-1.12.2.min.js"></script>
 <script>
     var i = 0;
-    var box = document.getElementById("box")
+    var box = document.getElementById("box");
+    var time = null;
     window.onmousewheel = function (e) {
-        console.log(e.wheelDelta);
-        e.wheelDelta>0?i--:i++;
-        i = i>0?0:i;
-        i = i<-130?-130:i;
-        box.style.transform = "translate("+20*i+"px)"
+        clearTimeout(time)
+        time = setTimeout(function () {
+            e.wheelDelta > 0 ? i-- : i++;
+            i = i > 0 ? 0 : i;
+            i = i < -130 ? -130 : i;
+            box.style.transform = "translate(" + 1200 * i + "px)";
+            console.log(1)
+        },100)
     }
 </script>
 </body>
