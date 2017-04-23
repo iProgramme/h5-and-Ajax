@@ -48,6 +48,7 @@ img {
   line-height: 30px;
   border: 1px solid #000;
   color: #000;
+  display: inline-block;
 }
 .index_up .youpiao {
   position: absolute;
@@ -63,6 +64,7 @@ img {
 }
 .index_up .youpiao .index_img img {
   height: 100%;
+  width: auto;
 }
 .index_up .youpiao .index_img span {
   color: #fff;
@@ -261,4 +263,30 @@ img {
 .section1 .container img {
   width: auto;
   height: 100%;
+}
+.section {
+  padding-top: 30px;
+}
+.section .section2 .row .col-md-2 {
+  font-size: 20px;
+}
+.section .section2 .row:first-child {
+  margin: 30px 0;
+}
+.section .section2 .progress {
+  height: 25px;
+}
+.section .section3 .col-md-2 {
+  line-height: 300px;
+}
+.section .section3 .col-md-8 {
+  line-height: 24px;
+  background-color: #eee;
+}
+.section .section3 .col-md-8 .col-md-12 {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+.section .section3 .col-md-8 p {
+  font-size: 14px;
 }

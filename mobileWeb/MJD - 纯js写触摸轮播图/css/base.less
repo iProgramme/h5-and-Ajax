@@ -1,0 +1,79 @@
+/* ?????????? css reset*/
+
+*{
+  margin: 0;
+  padding: 0;
+  /*???????????????? ?????*/
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /*??????????????????????*/
+  -webkit-tap-highlight-color: transparent;
+}
+
+body{
+  font-size: 14px;
+  font-family: 'Microsoft YaHei', Arial, sans-serif; /*???? ??????*/
+  color:#333;
+}
+
+a,a:hover{
+  color:#333;
+  text-decoration: none;
+}
+
+ul,ol{
+  list-style: none;
+}
+
+input{
+  border:none;
+  outline: none;  /*??????*/
+  /*??????????????????????? 3d  ???*/
+  -webkit-appearance: none;
+}
+
+
+/*??????? common css*/
+
+.pull-left{
+  float: left;
+}
+
+.pull-right{
+  float: right;
+}
+
+/*???????*/
+.clearfix::before,
+.clearfix::after{
+  content:"";
+  height:0;
+  line-height: 0;
+  display: block;
+  visibility: hidden;
+  clear: both;
+}
+
+.ml-10{
+  margin-left:10px;
+}
+
+.mr-10{
+  margin-right:10px;
+}
+
+.bl{
+  border-left:1px solid #ccc;
+}
+
+.br{
+  border-right:1px solid #ccc;
+}
+
+.bt{
+  border-top:1px solid #ccc;
+}
+
+.bb{
+  border-bottom:1px solid #ccc;
+}
