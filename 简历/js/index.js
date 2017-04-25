@@ -8,7 +8,7 @@ $(function() {
     var height = document.documentElement.clientHeight;
     var section = document.querySelectorAll('.section');
     var colors = [
-        'linear-gradient(to bottom,rgba(244,87,117,.9),rgba(227,97,137,.9))',
+        'linear-gradient(to bottom,rgba(244,10,10,.9),rgba(227,97,137,.9))',
         'linear-gradient(to bottom,rgba(227,97,137,.9),rgba(64,200,243,.9))',
         'linear-gradient(to bottom,rgba(64,200,243,.9),rgba(60,167,241,.9))',
         'linear-gradient(to bottom,rgba(60,167,241,.9),rgba(212,81,190,.9))',
@@ -23,16 +23,7 @@ $(function() {
         section[i].style.height = height+"px"
         section[i].style.background = colors[i]
     }
-    // 滚屏事件
-    window.onmousewheel = function (e) {
-        clearTimeout(time)
-        time = setTimeout(function () {
-            e.wheelDelta > 0 ? index++ : index--;
-            console.log(index)
-            box.style.transform = "translateZ(-300px) rotateX("+index*(-90)+"deg)";
-            box.style.transition = "transform 1s";
-        },100)
-    }
+
     $('#accordion').collapse()
     // 每次滚屏结束之后调用函数
     box.addEventListener('transitionend',function () {
@@ -51,7 +42,7 @@ $(function() {
     // 中间文字的入场动画
     $(".char3Ds").each(function (index,item) {
         setTimeout(function () {
-            $(item).addClass("animated fadeInLeft")
+            $(item).addClass("animated fadeInLeft").removeClass('collapse')
         },(index+1)*1000)
     })
 
@@ -61,7 +52,21 @@ $(function() {
         $('.index_up').addClass('zoomOutUp');
         setTimeout(function () {
             $("nav.navbar").addClass('bounceInUp').removeClass("collapse")
-        },2000)
+        },1500)
+        setTimeout(function () {
+            $(".index_main").removeClass('collapse').addClass("rollIn")
+        },3000)
+        // 滚屏事件
+        window.onmousewheel = function (e) {
+            clearTimeout(time)
+            box.classList.remove('rollIn')
+            time = setTimeout(function () {
+                e.wheelDelta > 0 ? index++ : index--;
+                console.log(index)
+                box.style.transform = "translateZ(-300px) rotateX("+index*(-90)+"deg)";
+                box.style.transition = "transform 1s";
+            },100)
+        }
     })
 });
 
