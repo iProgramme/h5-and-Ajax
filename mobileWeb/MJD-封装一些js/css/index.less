@@ -1,0 +1,259 @@
+.bgz(@w,@h){
+  background-size:@w @h;
+  -webkit-background-size:@w @h;
+}
+
+body{
+  background-color: #eee;
+}
+.jd-layout{
+  max-width: 640px;
+  min-width: 320px;
+  background-color: #fff;
+  height: 1200px;
+  margin:0 auto;
+}
+
+
+/*头部*/
+.jd-header{
+  position: fixed;
+  left:0;
+  top:0;
+  z-index:999;
+  height: 40px;
+
+  width: 100%;
+  .header-in{
+    max-width: 640px;
+    height: 40px;
+    margin:0 auto;
+    padding:0 50px 0 70px;
+    position: relative;
+    form{
+      width: 100%;
+      height: 40px;
+      padding-top:5px;
+      position: relative;
+      input{
+        width: 100%;
+        height: 30px;
+        border-radius: 15px;
+        background-color: #fff;
+        padding-left:30px;
+      }
+      .icon-search{
+        position: absolute;
+        left:10px;
+        top:10px;
+        width: 20px;
+        height: 20px;
+        background-position: -59px -109px;
+
+      }
+    }
+
+    /*logo*/
+    .icon-logo{
+      position: absolute;
+      left:5px;
+      top:5px;
+      width: 60px;
+      height: 30px;
+      background-position:  0px -103px;
+    }
+    .login{
+      position: absolute;
+      right:0;
+      top:0;
+      width: 50px;
+      height: 40px;
+      text-align: center;
+      line-height: 40px;
+      color:#fff;
+    }
+  }
+}
+
+/*banner*/
+.jd-banner{
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  ul{
+    width:1000%;
+    -webkit-transform:translateX(-10%);
+            transform:translateX(-10%);
+    li{
+      float: left;
+      width: 10%;
+      a{
+        display: block;
+        img{
+          width: 100%;
+          display: block;
+        }
+      }
+    }
+  }
+  ol{
+    position: absolute;
+    left:50%;
+    bottom:15px;
+    -webkit-transform:translateX(-50%);
+            transform:translateX(-50%);
+    li{
+      float: left;
+      width: 8px;
+      height: 8px;
+      border: 1px solid #fff;
+      border-radius: 50%;
+      margin-right:8px;
+    }
+    .active{
+      background-color: #fff;
+    }
+  }
+}
+
+/*导航*/
+.jd-nav{
+  padding:20px 0;
+  border-bottom:1px solid #ccc;
+  ul{
+    li{
+      float: left;
+      width: 25%;
+      margin-bottom:20px;
+      a{
+        display: block;
+        text-align: center;
+        img{
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
+}
+
+/* 产品模块*/
+.jd-product{
+  background-color: #eee;
+  padding:10px;
+  .item{
+    background-color: #fff;
+    margin-bottom:20px;
+    box-shadow: 0 0 5px 0 #999;
+    .item-header{
+      height: 32px;
+      border-bottom:1px solid #ccc;
+      line-height: 32px;
+      h4{
+        font-weight: normal;
+        padding-left:25px;
+        position: relative;
+        &::before{
+          content:"";
+          position: absolute;
+          width: 3px;
+          height: 15px;
+          left:11px;
+          top:8px;
+          background-color: red;
+        }
+      }
+    }
+    .item-body{
+      >a{
+        width: 50%;
+        img{
+          width: 100%;
+          display: block;
+        }
+      }
+    }
+  }
+  .sk{
+    .item-header{
+      .sk-logo{
+        width: 16px;
+        height: 20px;
+        background:url(../images/seckill-icon.png) no-repeat;
+        .bgz(100%,100%);
+        margin-top:4px;
+      }
+      .time{
+        margin-top:8px;
+        span{
+          float: left;
+          width: 13px;
+          height: 15px;
+          background-color: #000;
+          color:#fff;
+          text-align: center;
+          line-height: 15px;
+          margin-right:6px;
+          &:nth-child(3n){
+            background-color: #fff;
+            color:#000;
+            width: 8px;
+          }
+        }
+      }
+    }
+    .item-body{
+      padding:15px 0;
+      ul{
+        li{
+          float: left;
+          width: 33.33%;
+          text-align: center;
+          font-size: 12px;
+          &:nth-child(2) a{
+            border-left:1px solid #ccc;
+            border-right:1px solid #ccc;
+          }
+          a{
+            display: block;
+            width: 100%;
+            img{
+              width: 60%;
+            }
+          }
+          p:nth-child(2){
+            color:red;
+          }
+
+          p:nth-child(3){
+            text-decoration: line-through;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*底部*/
+.jd-footer{
+  position: fixed;
+  left:0;
+  bottom:0;
+  width: 100%;
+  height: 44px;
+  background-color: #fff;
+  ul{
+    li{
+      float: left;
+      width: 25%;
+      text-align: center;
+      a{
+        display: block;
+        width: 100%;
+        img{
+          height: 44px;
+        }
+      }
+    }
+  }
+}

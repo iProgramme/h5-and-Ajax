@@ -7,6 +7,9 @@ body {
 div.collapse {
   display: none;
 }
+body {
+  perspective: 16000px;
+}
 img {
   width: 100%;
 }
@@ -22,11 +25,11 @@ img {
 /*最顶层*/
 .index_up {
   position: fixed;
-  background-color: rgba(255, 255, 255, 0.6);
+  background: radial-gradient(at center, #f4f4f4, #000000);
   width: 100%;
   height: 100%;
   padding: 20px;
-  z-index: 10;
+  z-index: 101;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -34,7 +37,7 @@ img {
   line-height: 1.3;
   flex-direction: column;
   color: #fff;
-  box-shadow: 0 0 29px 5px #999 inset;
+  box-shadow: 0 0 39px 5px #eee inset;
 }
 .index_up .qq {
   position: absolute;
@@ -46,8 +49,8 @@ img {
   height: 30px;
   text-align: center;
   line-height: 30px;
-  border: 1px solid #000;
-  color: #000;
+  border: 1px solid #fff;
+  color: #fff;
   display: inline-block;
 }
 .index_up .youpiao {
@@ -87,39 +90,6 @@ img {
 .char3Ds:nth-child(5) {
   margin-left: 400px;
 }
-.char3Ds:hover {
-  cursor: default;
-}
-.char3Ds:hover .char3D::before {
-  transform: scale(0.95, 1) skewY(20deg);
-}
-.char3Ds:hover .char3D::after {
-  transform: rotateY(-30deg) scale(0.95, 1) skewY(5deg);
-}
-.char3Ds .char3D {
-  position: relative;
-  transform-style: preserve-3d;
-}
-.char3Ds .char3D:before {
-  content: attr(data-char);
-  position: absolute;
-  left: 0;
-  top: 0;
-  transform: skewY(5deg) scale(0.95, 1);
-  color: rgba(0, 0, 0, 0.4);
-  transform-origin: left;
-  transition: transform .5s;
-}
-.char3Ds .char3D:after {
-  content: attr(data-char);
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: #fff;
-  transform-origin: left;
-  transition: transform .5s;
-  transform: scale(0.95, 1);
-}
 .up_btn {
   position: absolute;
   right: 40px;
@@ -131,24 +101,26 @@ img {
   background: -webkit-linear-gradient(top, #eee, #999);
   color: #000;
   transition: all .5s linear;
+  text-decoration: none;
 }
 .up_btn a:hover {
   color: #fff;
 }
 /*四个大页面切换*/
 .index_main {
+  position: relative;
   transform-style: preserve-3d;
 }
 /*导航*/
 .navbar-default-y {
-  background-color: rgba(199, 199, 199, 0.6);
+  background-color: #c7c7c7;
   border-color: #e7e7e7;
   min-height: auto;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 888;
+  z-index: 100;
 }
 .navbar-default-y .navbar-brand {
   color: #777;
@@ -220,6 +192,7 @@ img {
 /*第一页*/
 .section1 {
   height: 100%;
+  z-index: 10;
 }
 .section1 .container {
   background: url("../img/first.png") no-repeat 0 -20px #ddd;
@@ -265,6 +238,12 @@ img {
   height: 100%;
 }
 .section {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  overflow: hidden;
   padding-top: 30px;
 }
 .section .section2 .row .col-md-2 {
@@ -276,17 +255,39 @@ img {
 .section .section2 .progress {
   height: 25px;
 }
-.section .section3 .col-md-2 {
-  line-height: 300px;
+.section .section3 {
+  margin-top: 100px;
 }
-.section .section3 .col-md-8 {
-  line-height: 24px;
-  background-color: #eee;
+.section .section3 .nav3-tabs {
+  background-color: #fff;
 }
-.section .section3 .col-md-8 .col-md-12 {
-  margin-bottom: 20px;
-  font-size: 16px;
+.section .section3 .nav3-tabs li {
+  margin-bottom: -1px;
 }
-.section .section3 .col-md-8 p {
-  font-size: 14px;
+.section .section3 .nav3-tabs li > a {
+  margin-right: 2px;
+  line-height: 1.42857143;
+  border-radius: 4px 4px 0 0;
+}
+.section .section3 .nav3-tabs li > a:hover {
+  background-color: #fff;
+}
+.section .section3 .nav3-tabs .active > a,
+.section .section3 .nav3-tabs .active > a:hover,
+.section .section3 .nav3-tabs .active > a:focus {
+  color: #555;
+  background-color: #fff;
+  cursor: default;
+}
+.section .section3 .tab-content {
+  margin-bottom: 50px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.section .section3 .tab-content h3 {
+  text-align: center;
+}
+.section .section3 .tab-content .com_info {
+  color: #888;
+  text-align: center;
 }

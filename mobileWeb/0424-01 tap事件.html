@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            margin:100px auto;
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<div class="box"></div>
+
+<script>
+    var box = document.querySelector('.box')
+
+//    box.addEventListener('touchend',function (e) {
+//        console.log(e)
+//    })
+//    var t = new Date()
+//    console.log(t-1)
+
+
+    // 封装一个插件
+    function tap(box,fn) {
+        var weizhi1,weizhi2,time1,time2,move=0,flag = true;
+        box.addEventListener('touchstart',function (e) {
+            time1 = new Date()
+            weizhi1 = e.targetTouches[0].clientX
+        })
+        box.addEventListener('touchmove',function (e) {
+            move = e.targetTouches[0].clientX - weizhi1;
+            if (move!=0) {
+                flag = false
+            }
+            console.log(move)
+        })
+        box.addEventListener('touchend',function (e) {
+            time2 = new Date();
+            weizhi2 = e.changedTouches[0].clientX;
+            if (time2-time1<150&&flag) {
+                console.log(time1-1)
+                console.log(time2-1)
+                fn()
+            }
+        })
+    }
+    function f1() {
+        console.log('好的')
+    }
+    tap(box,f1)
+</script>
+</body>
+</html>

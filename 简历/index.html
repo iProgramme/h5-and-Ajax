@@ -9,18 +9,11 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/index.css">
-    <style>
-        .index_main{
-            /*height:300px;*/
-            /*background: linear-gradient(to bottom,red,yellow,red,yellow,red,yellow);*/
-        }
-
-    </style>
 </head>
 
 <body>
     <!-- 最顶层开始 -->
-    <div class="index_up collapse">
+    <div class="index_up animated ">
         <div class="qq">
             <span class="qq3d" data-char="7">7</span>
             <span class="qq3d" data-char="4">4</span>
@@ -61,7 +54,7 @@
     </div>
     <!-- 最顶层结束 -->
     <!--顶部导航-->
-    <nav class="navbar navbar-default-y">
+    <nav class="navbar navbar-default-y animated collapse">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" >
@@ -121,9 +114,9 @@
     </nav>
     <!--顶部导航-->
     <!--立方体-->
-    <div class="index_main">
+    <div class="index_main collapse">
         <!--第一屏 随便说几句-->
-        <div class="section section1 collapse">
+        <div class="section section1">
             <div class="container">
                 <div class="col-md-12 text-center">
                     <h3>"您"遗失的前端工程师</h3>
@@ -194,7 +187,7 @@
         <!--第二屏-->
 
         <!--第二屏 技能-->
-        <div class="section collapse">
+        <div class="section">
             <div class="container section2">
                 <div class="row">
                     <div class="col-md-12 text-center">
@@ -261,24 +254,65 @@
 
         <!--第三屏 就职公司-->
         <div class="section ">
-            <div class="container section3">
-                <div class="row text-center">
-                    <div class="col-md-2">宇信科技</div>
-                    <div class="col-md-8">
-                        <div class="col-md-4">公司信息介绍</div>
-                        <div class="col-md-8">公司信息介绍公司信息介绍公司信息介绍公司信息介绍公司信息介绍公司信息介绍公司信息介绍</div>
-                        <div class="col-md-4">我在公司干嘛</div>
-                        <div class="col-md-8">我在公司干嘛我在公司干嘛我在公司干嘛我在公司干嘛我在公司干嘛我在公司干嘛</div>
+            <div class="container section3 clearfix">
+                <ul class="nav nav3-tabs pull-left col-md-3" >
+                    <li class="active"><a href="#company0" data-toggle="tab">北京宇信科技集团股份有限公司</a></li>
+                    <li><a href="#company1" data-toggle="tab">广州盈泽科技</a></li>
+                    <li><a href="#company2" data-toggle="tab">传智播客算不算</a></li>
+                    <li><a href="#company3" data-toggle="tab">接下来去哪比较好</a></li>
+                </ul>
+
+                <div class="tab-content col-md-7 pull-left col-md-offset-1">
+                    <div class="tab-pane active" id="company0">
+                        <h3>北京宇信科技</h3>
+                        <div class="com_info">
+                            <p class="col-md-6">给银行做</p>
+                            <p class="col-md-6">2011-1999</p>
+                        </div>
+
+                        <ol class="col-md-8 col-md-offset-2">
+                            <li>首页修改</li>
+                            <li>电子银行</li>
+                            <li>个人服务</li>
+                            <li>好多好多</li>
+                        </ol>
                     </div>
-                    <div class="col-md-2">迎泽科技</div>
+                    <div class="tab-pane" id="company1">
+                        阿卡三季度哈可接受的卡技术的库拉索机会大老师的哈里斯看见很多啊啥看见号打蜡开始就
+                    </div>
+                    <div class="tab-pane" id="company2">
+                        啊考试酒喝多了卡时间段哈
+                    </div>
+                    <div class="tab-pane" id="company3">
+                        啊几十块海底捞哈市了的客家话
+                    </div>
                 </div>
             </div>
         </div>
         <!--第三屏-->
 
         <div style="display: none;">
-            1、个人简介
-            2、学历年龄,位置离职
+            已学技能
+            HTML5
+            CSS3
+            JavaScript
+            jQuery
+            懒加载
+            jQuery颜色渐变
+            jQueryUI
+            jQuery easing
+            (安装 webstorm 和 less )
+            上面是第一个月学的
+
+            bootstrap
+            fullPage.js
+            animate.css -------------css动画库
+            zepto.js ----------------手机端的jQuery
+            swiper.js ---------------手指滑动事件
+            wampserver / xampp-osx---安装Apache 服务器
+            php
+            ajax
+            这是第二个月学的
         </div>
     </div>
     <!--立方体-->
@@ -287,26 +321,7 @@
 </html>
 <script src="js/jquery-1.12.1.min.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
-<script type="text/javascript">
-$(function() {
-    var i = 0;
-    var box = document.querySelector('.index_main');
-    var time = null;
-    var height = document.documentElement.clientHeight;
-    // 滚屏事件
-    window.onmousewheel = function (e) {
-        clearTimeout(time)
-        time = setTimeout(function () {
-            e.wheelDelta > 0 ? i++ : i--;
-            console.log(i)
-            box.style.transform = "translateY(" + height * i + "px)"+"rotateX("+i*(-90)+"deg)";
-            box.style.transition = "transform 10s";
-        },100)
-    }
-    $('#accordion').collapse()
-});
-</script>
-
+<script src="js/index.js"></script>
 
 
 

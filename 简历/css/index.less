@@ -7,6 +7,9 @@ html, body {
 div.collapse{
   display: none;
 }
+body{
+  perspective: 16000px;
+}
 img{
   width: 100%;
 }
@@ -23,11 +26,13 @@ img{
 .index_up {
   position: fixed;
   //background: linear-gradient(to bottom,rgba(0,0,0,.9),rgba(0,255,0,.4));
-  background-color: rgba(255, 255, 255, .6);
+  //background: linear-gradient(to right,rgba(0,0,0,.85) 40%,rgba(60,167,241,.9),rgba(212,81,190,.9),rgba(255,255,255,.9));
+  //background: rgba(0,0,0,.9);
+  background: radial-gradient(at center,rgba(244,244,244,1),rgba(0,0,0,1));
   width: 100%;
   height: 100%;
   padding: 20px;
-  z-index: 10;
+  z-index: 101;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,7 +40,7 @@ img{
   line-height: 1.3;
   flex-direction: column;
   color: #fff;
-  box-shadow: 0 0 29px 5px #999 inset;
+  box-shadow: 0 0 39px 5px #eee inset;
   .qq {
     position: absolute;
     top: 20px;
@@ -45,8 +50,8 @@ img{
       height: 30px;
       text-align: center;
       line-height: 30px;
-      border: 1px solid #000;
-      color: #000;
+      border: 1px solid #fff;
+      color: #fff;
       display: inline-block;
     }
   }
@@ -88,39 +93,7 @@ img{
   &:nth-child(5) {
     margin-left: 400px;
   }
-  &:hover {
-    cursor: default;
-    .char3D::before {
-      transform: scale(.95, 1) skewY(20deg);
-    }
-    .char3D::after {
-      transform: rotateY(-30deg) scale(.95, 1) skewY(5deg);
-    }
-  }
-  .char3D {
-    position: relative;
-    transform-style: preserve-3d;
-    &:before {
-      content: attr(data-char);
-      position: absolute;
-      left: 0;
-      top: 0;
-      transform: skewY(5deg) scale(.95, 1);
-      color: rgba(0, 0, 0, 0.4);
-      transform-origin: left;
-      transition: transform .5s;
-    }
-    &:after {
-      content: attr(data-char);
-      position: absolute;
-      left: 0;
-      top: 0;
-      color: #fff;
-      transform-origin: left;
-      transition: transform .5s;
-      transform: scale(.95, 1)
-    }
-  }
+
 }
 
 .up_btn {
@@ -133,6 +106,7 @@ img{
     background: -webkit-linear-gradient(top, #eee, #999);
     color: #000;
     transition: all .5s linear;
+    text-decoration: none;
     &:hover {
       color: #fff
     }
@@ -142,18 +116,19 @@ img{
 
 /*四个大页面切换*/
 .index_main{
+  position: relative;
   transform-style: preserve-3d;
 }
 /*导航*/
 .navbar-default-y {
-  background-color: rgba(199,199,199,.6);
+  background-color: rgba(199,199,199,1);
   border-color: #e7e7e7;
   min-height:auto;
   position: fixed;
   top:0;
   left:0;
   right:0;
-  z-index:888;
+  z-index:100;
   .navbar-brand {
     color: #777;
     padding:0;
@@ -232,6 +207,8 @@ img{
 /*第一页*/
 .section1{
   height:100%;
+  z-index:10;
+  z-index:10;
   .container{
     background: url("../img/first.png") no-repeat 0 -20px #ddd;
     box-shadow: 2px 2px 2px 2px #eee;
@@ -279,8 +256,13 @@ img{
 }
 
 .section{
+  position: absolute;
+  top:0;
+  height:100%;
+  width:100%;
+  left:0;
+  overflow: hidden;
   padding-top:30px;
-
   //第二屏
   //.section2{
   //  .row{
@@ -301,6 +283,7 @@ img{
   //    font-size:18px;
   //  }
   //}
+
   .section2{
     .row{
       .col-md-2{
@@ -314,19 +297,39 @@ img{
       height:25px;
     }
   }
-  .section3{
-    .col-md-2{
-      line-height:300px;
-    }
-    .col-md-8{
-      line-height:24px;
-      background-color: #eee;
-      .col-md-12{
-        margin-bottom:20px;
-        font-size:16px;
+  .section3 {
+    margin-top:100px;
+    .nav3-tabs {
+      background-color: #fff;
+      li {
+        margin-bottom: -1px;
+        > a {
+          margin-right: 2px;
+          line-height: 1.42857143;
+          border-radius: 4px 4px 0 0;
+          &:hover {
+            background-color: #fff;
+          }
+        }
       }
-      p{
-        font-size:14px;
+      .active > a,
+      .active > a:hover,
+      .active > a:focus {
+        color: #555;
+        background-color: #fff;
+        cursor: default;
+      }
+    }
+    .tab-content{
+      margin-bottom:50px;
+      border-radius:10px;
+      background-color: #fff;
+      h3{
+        text-align: center;
+      }
+      .com_info{
+        color:#888;
+        text-align: center;
       }
     }
   }

@@ -2,7 +2,8 @@ window.onload=function(){
     setHeader();
     // interval();
     // lunbo()
-    bannerlunbo()
+    // bannerlunbo()
+    lunbo3()
 }
 
 // 滚动变色
@@ -206,6 +207,73 @@ function bannerlunbo() {
         yuandian()
     })
 }
+
+
+// 第三遍轮播
+function lunbo3() {
+    var banner = document.querySelector('.jd-banner')
+    var ul = banner.querySelector('ul')
+    var lis = document.querySelectorAll('ol li')
+    var w = -banner.offsetWidth   // 这里直接得到负数
+    var index = 1;
+    // 自动轮播
+    var timeid = setInterval(function () {
+        index++;
+        ul.style.transition = "transform .3s";
+        ul.style.transform = "translateX("+index*w+"px)";
+    },1000)
+
+    // 小圆点跟着动
+    function ollidong() {
+        for (var i = 0; i < lis.length; i++) {
+            lis[i].classList.remove('active')
+        }
+        lis[index-1].classList.add('active')
+    }
+
+    // 触摸事件
+    var startX = 0;
+    var moveX = 0;
+    banner.addEventListener('touchstart',function (e) {
+        startX = e.targetTouches[0].clientX;
+        clearInterval(timeid)
+    })
+    banner.addEventListener('touchmove',function (e) {
+        moveX = e.targetTouches[0].clientX - startX;
+        ul.style.transition = "none";
+        ul.style.transform = "translateX("+(index*w+moveX)+"px)";
+    })
+    banner.addEventListener('touchend',function (e) {
+        if (Math.abs(moveX)>-w/3) {
+            if (moveX>0) {
+                index--;
+            }
+            if (moveX<0) {
+                index++
+            }
+        }
+        ul.style.transition = "transform .3s";
+        ul.style.transform = "translateX("+index*w+"px)";
+        startX = 0;
+        moveX = 0
+    })
+    // 每次动画结束的事件
+    ul.addEventListener('transitionend',function () {
+        if (index>=9) {
+            index = 1;
+            ul.style.transition = "none";
+            ul.style.transform = "translateX("+w+"px)";
+        }
+        if (index<=0) {
+            index = 8;
+            ul.style.transition = "none";
+            ul.style.transform = "translateX("+w*index+"px)";
+        }
+        ollidong()
+    })
+}
+
+
 
 
 
