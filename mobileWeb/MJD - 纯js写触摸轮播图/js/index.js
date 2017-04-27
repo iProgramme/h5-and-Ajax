@@ -255,7 +255,12 @@ function lunbo3() {
         ul.style.transition = "transform .3s";
         ul.style.transform = "translateX("+index*w+"px)";
         startX = 0;
-        moveX = 0
+        moveX = 0;
+        timeid = setInterval(function () {
+                index++;
+                ul.style.transition = "transform .3s";
+                ul.style.transform = "translateX("+index*w+"px)";
+            },1000)
     })
     // 每次动画结束的事件
     ul.addEventListener('transitionend',function () {
@@ -269,7 +274,7 @@ function lunbo3() {
             ul.style.transition = "none";
             ul.style.transform = "translateX("+w*index+"px)";
         }
-        ollidong()
+        ollidong();
     })
 }
 

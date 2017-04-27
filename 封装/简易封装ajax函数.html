@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>php新用法</title>
+	<style>
+		.box{
+			text-align: center;
+			margin-top: 100px;
+		}
+		ul{
+			list-style: none;
+			text-align: left;
+			padding: 10px;
+		}
+		.info{
+			
+			width: 500px;
+			min-height: 200px;
+			border: 1px solid #000;
+			margin: 50px auto;
+		}
+	</style>
+</head>
+<body>
+<div class="box">
+	<h4>获取学生信息，输入学号或者 all</h4>
+	<h6>( 学号是0-6 )</h6>
+	<input type="text" name="username">
+	<button>点击查询</button>
+	<div class="info"></div>
+</div>
+<script>
+var info = document.querySelector('.info');
+var btn = document.querySelector('button');
+var inp = document.querySelector('input')
+btn.onclick = function(){
+	$ajax(inp,'post','03-get-score.php',function(a){
+		info.innerHTML = a;
+		inp.value = ''
+	});
+	
+}
+
+/**
+ * [$ajax 封装 ajax 函数]
+ * @param  {[object]}   value [要传入的input]
+ * @param  {[string]}   get   [传输方式]
+ * @param  {[string]}   url   [处理程序的地址]
+ * @param  {Function} fn    [回调函数]
+ * @return {[Function]}         [将获得的值，传入将要调用的函数中]
+ */
+function $ajax(value,get,url,fn){
+	var inpv = value.value;
+	var ajax = new XMLHttpRequest();
+	if (get=='get') {
+		ajax.open('get','03-get-score.php?name='+inpv);
+		ajax.send(null); // 可以没有这个请求主体，因为请求行上有（get的请求头被我省略了）
+	}else if (get=='post') {
+		ajax.open('post',url);
+		ajax.setRequestHeader('content-type','application/x-www-form-urlencoded');
+		ajax.send('name='+inpv)
+	}
+	ajax.onreadystatechange = function(){
+		if (ajax.readyState == 4&& ajax.status == 200) {
+			var txt = ajax.responseText;
+			return fn(txt)	
+		}
+	}
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
