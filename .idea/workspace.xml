@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ecde9381-f502-49af-b1f0-f5cca23232e7" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/表格笔记.numbers" afterPath="$PROJECT_DIR$/表格笔记.numbers" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/日期.html" afterPath="$PROJECT_DIR$/日期.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/简历/css/index.css" afterPath="$PROJECT_DIR$/简历/css/index.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/简历/css/index.less" afterPath="$PROJECT_DIR$/简历/css/index.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/简历/index.html" afterPath="$PROJECT_DIR$/简历/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/简历/js/index.js" afterPath="$PROJECT_DIR$/简历/js/index.js" />
     </list>
     <ignored path="h5和Ajax.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,7 +30,18 @@
     <favorites_list name="h5和Ajax" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="日期.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/日期.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="485">
+              <caret line="107" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -70,7 +86,6 @@
         <option value="$PROJECT_DIR$/h5c3/0418-01 手机触摸.html" />
         <option value="$PROJECT_DIR$/mobileWeb/0417-01移动web.html" />
         <option value="$PROJECT_DIR$/mobileWeb/main.less" />
-        <option value="$PROJECT_DIR$/日期.html" />
         <option value="$PROJECT_DIR$/h5c3/0415-03 点击添加图片等.html" />
         <option value="$PROJECT_DIR$/h5c3/0414-02 3D 切割轮播.html" />
         <option value="$PROJECT_DIR$/练习/0413-02 3D真正立体效果.html" />
@@ -95,8 +110,9 @@
         <option value="$PROJECT_DIR$/mobileWeb/MJD-封装一些js/js/cart.js" />
         <option value="$PROJECT_DIR$/mobileWeb/MJD-封装一些js/js/category.js" />
         <option value="$PROJECT_DIR$/简历/css/index.less" />
-        <option value="$PROJECT_DIR$/简历/js/index.js" />
         <option value="$PROJECT_DIR$/简历/index.html" />
+        <option value="$PROJECT_DIR$/简历/js/index.js" />
+        <option value="$PROJECT_DIR$/日期.html" />
       </list>
     </option>
   </component>
@@ -153,48 +169,16 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="h5和Ajax" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="h5和Ajax" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="简历" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="h5和Ajax" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="h5和Ajax" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="简历" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/封装" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../js高级" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
@@ -321,11 +305,22 @@
       <workItem from="1493115364292" duration="281000" />
       <workItem from="1493116478929" duration="2280000" />
       <workItem from="1493166337427" duration="882000" />
+      <workItem from="1493340908300" duration="4000" />
+      <workItem from="1493605764978" duration="3693000" />
+      <workItem from="1493693495494" duration="4612000" />
+      <workItem from="1493773453022" duration="4056000" />
+      <workItem from="1493859097748" duration="20000" />
+      <workItem from="1493867441865" duration="10000" />
+      <workItem from="1493945998094" duration="48000" />
+      <workItem from="1494030935997" duration="5000" />
+      <workItem from="1494204706616" duration="40000" />
+      <workItem from="1494226412913" duration="57000" />
+      <workItem from="1494385826499" duration="22000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="183819000" />
+    <option name="totallyTimeSpent" value="196386000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -338,9 +333,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18268467" sideWeight="0.48356164" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13741064" sideWeight="0.48356164" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -412,7 +407,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/less/index.html" />
     <entry file="file://$PROJECT_DIR$/bootstarp网站副本/bootcss/customize.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286425">
@@ -429,13 +423,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mobileWeb/main.css" />
     <entry file="file://$PROJECT_DIR$/mobileWeb/main.less" />
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="123" column="0" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/h5c3/0415-03 点击添加图片等.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="331">
@@ -489,13 +476,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1700">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/日期.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="107" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -596,7 +576,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -713,42 +692,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/简历/img/bg1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/简历/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51">
-          <caret line="49" column="46" selection-start-line="49" selection-start-column="46" selection-end-line="49" selection-end-column="46" />
-          <folding>
-            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#6834#8226#0" expanded="false" />
-            <element signature="n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#3;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#4;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#5;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#6;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+        <state relative-caret-position="171">
+          <caret line="186" column="18" selection-start-line="186" selection-start-column="18" selection-end-line="186" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/简历/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="56" column="69" selection-start-line="56" selection-start-column="69" selection-end-line="56" selection-end-column="69" />
-          <folding>
-            <element signature="e#0#43#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="19">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/简历/css/index.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
-          <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+          <caret line="321" column="0" selection-start-line="321" selection-start-column="0" selection-end-line="321" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="142" column="0" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/日期.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="485">
+          <caret line="107" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
           <folding />
         </state>
       </provider>

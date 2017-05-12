@@ -10,6 +10,9 @@ div.collapse{
 body{
   perspective: 16000px;
 }
+ul{
+  list-style:none;
+}
 img{
   width: 100%;
 }
@@ -28,7 +31,7 @@ img{
   //background: linear-gradient(to bottom,rgba(0,0,0,.9),rgba(0,255,0,.4));
   //background: linear-gradient(to right,rgba(0,0,0,.85) 40%,rgba(60,167,241,.9),rgba(212,81,190,.9),rgba(255,255,255,.9));
   //background: rgba(0,0,0,.9);
-  background: radial-gradient(at center,rgba(244,244,244,1),rgba(0,0,0,1));
+  background: radial-gradient(at center,rgba(244,244,244,1),rgba(20,20,20,1));
   width: 100%;
   height: 100%;
   padding: 20px;
@@ -118,6 +121,8 @@ img{
 .index_main{
   position: relative;
   transform-style: preserve-3d;
+  margin-top:50px;
+
 }
 /*导航*/
 .navbar-default-y {
@@ -164,7 +169,7 @@ img{
     &:hover,
     &:focus {
       color: #000;
-      background-color: #e7e7e7;
+      background-color: transparent;
     }
   }
   .navbar-nav > .disabled > a {
@@ -259,10 +264,11 @@ img{
   position: absolute;
   top:0;
   height:100%;
-  width:100%;
-  left:0;
+  width:94%;
+  left:3%;
   overflow: hidden;
-  padding-top:30px;
+  //padding-top:30px;
+  border: 1px solid #000;
   //第二屏
   //.section2{
   //  .row{
@@ -286,6 +292,7 @@ img{
 
   .section2{
     .row{
+      color:#fff;
       .col-md-2{
         font-size:20px;
       }
@@ -295,50 +302,65 @@ img{
     }
     .progress{
       height:25px;
+      .progress-bar{
+        animation: progress_y 1s infinite linear;
+      }
     }
   }
   .section3 {
-    margin-top:100px;
-    .nav3-tabs {
-      background-color: #fff;
-      li {
-        margin-bottom: -1px;
-        > a {
-          margin-right: 2px;
-          line-height: 1.42857143;
-          border-radius: 4px 4px 0 0;
-          &:hover {
-            background-color: #fff;
-          }
+    margin-top:50px;
+    position: relative;
+    .nav3-tabs{
+      li{
+        width:40%;
+        margin:5px 5%;
+        background:rgba(250,250,250,.9);
+        border-radius:5px;
+        height:200px;
+        float: left;
+        text-align: center;
+      }
+    }
+  }
+  .section4{
+    height:100%;
+    .slide{
+      height:100%;
+      .carousel-indicators li{
+
+      }
+      .carousel-caption{
+        background-color: rgba(10,10,10,.5);
+        border-radius:5px;
+        padding-top:0
+      }
+      .carousel-inner{
+        height:100%;
+        .item{
+          height:100%;
+
         }
-      }
-      .active > a,
-      .active > a:hover,
-      .active > a:focus {
-        color: #555;
-        background-color: #fff;
-        cursor: default;
+
       }
     }
-    .tab-content{
-      margin-bottom:50px;
-      border-radius:10px;
-      background-color: #fff;
-      h3{
-        text-align: center;
-      }
-      .com_info{
-        color:#888;
-        text-align: center;
-      }
-    }
+
+
+
+
   }
 }
 
 
 
 
-
+@keyframes progress_y {
+  from{
+    background-position: 0 0;
+  }
+  to{
+    background-position: 40px 0;
+  }
+}
 
 
 

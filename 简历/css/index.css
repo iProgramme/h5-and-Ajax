@@ -10,6 +10,9 @@ div.collapse {
 body {
   perspective: 16000px;
 }
+ul {
+  list-style: none;
+}
 img {
   width: 100%;
 }
@@ -25,7 +28,7 @@ img {
 /*最顶层*/
 .index_up {
   position: fixed;
-  background: radial-gradient(at center, #f4f4f4, #000000);
+  background: radial-gradient(at center, #f4f4f4, #141414);
   width: 100%;
   height: 100%;
   padding: 20px;
@@ -110,6 +113,7 @@ img {
 .index_main {
   position: relative;
   transform-style: preserve-3d;
+  margin-top: 50px;
 }
 /*导航*/
 .navbar-default-y {
@@ -157,7 +161,7 @@ img {
 .navbar-default-y .navbar-nav > .active > a:hover,
 .navbar-default-y .navbar-nav > .active > a:focus {
   color: #000;
-  background-color: #e7e7e7;
+  background-color: transparent;
 }
 .navbar-default-y .navbar-nav > .disabled > a:hover,
 .navbar-default-y .navbar-nav > .disabled > a:focus {
@@ -241,10 +245,13 @@ img {
   position: absolute;
   top: 0;
   height: 100%;
-  width: 100%;
-  left: 0;
+  width: 94%;
+  left: 3%;
   overflow: hidden;
-  padding-top: 30px;
+  border: 1px solid #000;
+}
+.section .section2 .row {
+  color: #fff;
 }
 .section .section2 .row .col-md-2 {
   font-size: 20px;
@@ -255,39 +262,44 @@ img {
 .section .section2 .progress {
   height: 25px;
 }
-.section .section3 {
-  margin-top: 100px;
+.section .section2 .progress .progress-bar {
+  animation: progress_y 1s infinite linear;
 }
-.section .section3 .nav3-tabs {
-  background-color: #fff;
+.section .section3 {
+  margin-top: 50px;
+  position: relative;
 }
 .section .section3 .nav3-tabs li {
-  margin-bottom: -1px;
-}
-.section .section3 .nav3-tabs li > a {
-  margin-right: 2px;
-  line-height: 1.42857143;
-  border-radius: 4px 4px 0 0;
-}
-.section .section3 .nav3-tabs li > a:hover {
-  background-color: #fff;
-}
-.section .section3 .nav3-tabs .active > a,
-.section .section3 .nav3-tabs .active > a:hover,
-.section .section3 .nav3-tabs .active > a:focus {
-  color: #555;
-  background-color: #fff;
-  cursor: default;
-}
-.section .section3 .tab-content {
-  margin-bottom: 50px;
-  border-radius: 10px;
-  background-color: #fff;
-}
-.section .section3 .tab-content h3 {
+  width: 40%;
+  margin: 5px 5%;
+  background: rgba(250, 250, 250, 0.9);
+  border-radius: 5px;
+  height: 200px;
+  float: left;
   text-align: center;
 }
-.section .section3 .tab-content .com_info {
-  color: #888;
-  text-align: center;
+.section .section4 {
+  height: 100%;
+}
+.section .section4 .slide {
+  height: 100%;
+}
+.section .section4 .slide .carousel-caption {
+  background-color: rgba(10, 10, 10, 0.5);
+  border-radius: 5px;
+  padding-top: 0;
+}
+.section .section4 .slide .carousel-inner {
+  height: 100%;
+}
+.section .section4 .slide .carousel-inner .item {
+  height: 100%;
+}
+@keyframes progress_y {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 40px 0;
+  }
 }
